@@ -25,6 +25,17 @@ CentreStack differentiates itself from other file sync and share solutions by fo
 * **Mirroring network shares** – existing network shares can be published as Team Folders for collaboration without migration.
 * **Drive mapping & file locking** – the Windows client provides a mapped drive with file locking, version control and offline caching.
 
+Interface Overview
+------------------
+
+After signing in, administrators land on the **Cluster Dashboard**, which provides a summary of the CentreStack server status and quick access to common administrative modules. The dashboard shows the cluster's host name, current version, license status, and the number of connected tenants and users. It also lists nodes in the server farm and displays icons for managing cluster admins, group policies, branding settings, reports, billing, clients & applications, server farm, and product tours.
+
+.... image:: cluster_dashboard.png
+   :alt: Cluster Dashboard overview
+   :width: 600px
+
+
+
 Installation and Setup
 -----------------------
 
