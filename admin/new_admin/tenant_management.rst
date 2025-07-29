@@ -8,15 +8,15 @@ Tenants
 
 A tenant is an isolated workspace for a customer or department. Administrators can create new tenants, assign storage quotas, plan size, and configure policies. The Tenant Dashboard displays metrics such as number of users, team folders and storage usage, and alerts for ransomware protection and data leak protection【647716952080395†screenshot】.
 
-.. image:: tenant_manager.png
+.. image:: _static/tenant_manager.png
    :alt: Tenant Manager overview
    :width: 500px
 
-.. image:: new_tenant1.png
+.. image:: _static/new_tenant1.png
    :alt: New Tenant creation wizard
    :width: 500px
 
-.. image:: new_tenant2.png
+.. image:: _static/new_tenant2.png
    :alt: Tenant administrator information form
    :width: 500px
 
