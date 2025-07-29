@@ -23,3 +23,8 @@ html_theme = 'sphinx_rtd_theme'
 
 # Paths that contain custom static files, such as style sheets.
 html_static_path = ['_static']
+
+
+# Version information for the project
+version = '16.6'
+release = '16.6.10352.56511'
