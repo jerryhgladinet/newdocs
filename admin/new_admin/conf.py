@@ -19,7 +19,7 @@ exclude_patterns = []
 root_doc = 'index'
 
 # The theme to use for HTML and HTML Help pages.
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 # Paths that contain custom static files, such as style sheets.
 html_static_path = ['_static']
