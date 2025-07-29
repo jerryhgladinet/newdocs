@@ -6,7 +6,7 @@ Tenant Manager is where administrators manage tenants, users, groups, team folde
 Tenants
 -------
 
-A tenant is an isolated workspace for a customer or department. Administrators can create new tenants, assign storage quotas, plan size, and configure policies. The Tenant Dashboard displays metrics such as number of users, team folders and storage usage, and alerts for ransomware protection and data leak protection【6477169250880395†screenshot】.
+A tenant is an isolated workspace for a customer or department. Administrators can create new tenants, assign storage quotas, plan size, and configure policies. The Tenant Dashboard displays metrics such as number of users, team folders and storage usage, and alerts for ransomware protection and data leak protection【647716952080395†screenshot】.
 
 .. image:: tenant_manager.png
    :alt: Tenant Manager overview
