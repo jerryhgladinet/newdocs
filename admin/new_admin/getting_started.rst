@@ -1,8 +1,9 @@
 Getting Started
 ===============
 
-This section provides an introduction to CentreStack administration, including setup
-and initial configuration tasks.
+This section introduces CentreStack administration and explains how to access the
+management portal. It also outlines additional resources you should review before
+proceeding.
 
 Introduction
 ------------
@@ -54,70 +55,71 @@ Key capabilities include:
   storage backends such as Azure Blob, Amazon S3 or Wasabi to expand
   capacity or tier data while maintaining a single namespace.
 
-Deployment Scenarios
---------------------
+Before You Begin
+----------------
 
-CentreStack is flexible in how it can be deployed. Two common patterns are:
+CentreStack administration builds on three other guides that address installation,
+deployment and high‑level orientation. Read or skim these guides first:
 
-1. **On‑premises server** – Install the CentreStack server in the same local
-   network as your file servers and domain controllers. This configuration
-   provides the best performance and security because file operations never
-   leave the local network. Remote users connect to the server over HTTPS to
-   access data.
+* **Quick Start Guide** – Provides a high‑level overview of CentreStack and the
+  problems it solves. The guide explains the three deployment models – **On‑premises
+  self‑hosted**, **data‑centre MSP‑hosted** and **cloud SaaS‑hosted** – and
+  describes the benefits of each【52837153525271†L64-L90】. It also walks you through
+  registering for a partner account, accessing the partner portal and setting up a
+  trial environment.
 
-2. **Cloud or data‑centre server** – Deploy CentreStack in a public cloud
-   (such as AWS EC2 or Microsoft Azure) or an MSP’s datacentre. The server
-   can connect back to your on‑premises file servers over a secure VPN, or
-   you can run the optional *Server Agent* on the file server to bridge the
-   connection. This deployment can simplify remote access for distributed
-   teams and reduce on‑site hardware.
+* **Installation Guide** – Offers step‑by‑step instructions for installing the
+  CentreStack server on Windows Server. It covers prerequisites such as preparing
+  file storage, optional Active Directory integration, configuring a SQL Server or
+  MySQL database, running the installer and completing the initial setup【422876650002506†L63-L118】.
+  After following the Installation Guide you will have a working CentreStack server
+  and a cluster administrator account.
 
-Whichever deployment you choose, CentreStack offers the same management
-interface and feature set. Installation typically takes 15–30 minutes, and
-there is a 30‑day trial period before licences must be activated via the
-partner portal.
+* **Deployment Guide** – Focuses on planning and sizing your CentreStack
+  deployment. It discusses terminology, system requirements, hardware sizing,
+  capacity planning, load balancing and deployment scenarios for on‑premises,
+  hosted and cloud environments【422876650002506†L63-L118】. It also covers best
+  practices for Active Directory integration, storage, backup and security. Review
+  this guide to ensure your infrastructure is ready before going live.
 
-Interface Overview
-------------------
+Accessing the Web Portal
+------------------------
 
-After signing in, administrators land on the **Cluster Dashboard**, which
-shows the cluster status and provides quick access to common tasks. The
-screenshot below highlights the major components.
+Once CentreStack is installed, open a browser to access the web portal. If you are
+on the server console (local keyboard/monitor or via Remote Desktop), navigate to
+``http://localhost/``. If you configured a fully qualified domain name or external
+URL during installation, use that address instead. The login page displays the
+CentreStack build number in the lower right corner and prompts for the
+cluster administrator credentials you created earlier.
+
+First page: Tenant Manager
+--------------------------
+
+After successful login you land on the **Tenant Manager**. This page lists
+existing tenants and allows you to create new ones, assign administrators, view
+storage usage and check security alerts. If only one tenant exists, the Tenant
+Manager acts as both cluster and tenant administration portal. From the Tenant
+Manager you can navigate to other modules such as Settings, Reports and
+Branding.
+
+Cluster Dashboard Overview
+--------------------------
+
+The **Cluster Dashboard** provides a high‑level view of the health and status of
+your CentreStack installation. It summarises licence usage, server farm status,
+worker node health and client versions, and provides quick links to common
+administrative tasks such as cluster branding, group policy and reports. You can
+reach the dashboard by clicking the **Dashboard** button in the navigation menu.
+The screenshot below highlights the major components of the dashboard.
 
 .. image:: cluster_dashboard.png
    :alt: Cluster Dashboard overview
    :width: 600px
 
-Installation and Setup
-----------------------
+Next Steps
+----------
 
-This guide assumes that you have access to a Windows Server environment. To
-install the CentreStack server software:
-
-1. Ensure prerequisites are met: a supported Windows Server edition, IIS,
-   .NET Framework 4.8 or later, and a SQL database (either SQL Server or
-   MySQL).
-2. Download the CentreStack installer and run it on the server.
-3. Follow the setup wizard to install the server components.
-4. When prompted, configure the database connection (SQL Server or MySQL) and
-   create or connect to an existing database.
-5. Specify the hostname and port for the web portal.
-6. Create the cluster administrator account with a strong password.
-7. Complete the installation and sign in to the web portal using the cluster
-   admin credentials.
-
-Initial Configuration
----------------------
-
-After installation, perform the following tasks to set up your first tenant
-and users:
-
-1. Navigate to **Tenant Manager** and click **New Tenant**.
-2. Enter a name, administrator email, plan and storage settings, then
-   proceed to create the tenant.
-3. In the newly created tenant, go to **Team Folders** and attach existing
-   file server folders or cloud storage as team folders.
-4. Invite users and groups to the tenant. You can create native users or
-   import users and groups from Active Directory.
-5. Test end‑user access using the web portal and native clients to ensure
-   the configuration works as expected.
+With an understanding of how to access the portal and where key modules live,
+you can proceed through the rest of this Administration Guide. The following
+chapters describe tenant management, settings, reports, branding, client
+downloads and troubleshooting in detail.
