@@ -1,13 +1,12 @@
-New Admin Guide
-===============
-
-Welcome to the CentreStack Admin Guide. This guide provides instructions and reference for administrators to install, configure, and manage the CentreStack platform.
+CentreStack Admin Guide
+=======================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contents
 
    getting_started
+   administration_scope
    tenant_management
    settings
    reports
