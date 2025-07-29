@@ -1,98 +1,55 @@
 Getting Started
-    ===============
+===============
 
-    .. contents:: Table of Contents
-       :local:
-       :depth: 2
+This section provides an introduction to CentreStack administration, including setup and initial configuration tasks.
 
-    This section provides an introduction to CentreStack administration, 
-including setup and essential configuration tasks.
+Introduction
+------------
 
-    Introduction
-    ------------
+Welcome to the CentreStack Administration Guide. CentreStack is a mobile access and secure file-sharing solution that focuses on local file server cloud-enablement. It runs on Microsoft Windows Server and includes client agents for Windows, Mac OS X, web browsers and mobile devices (Android and iOS).
 
-    Welcome to the CentreStack Administration Guide. CentreStack is a mobile 
-access and secure file sharing solution that focuses on local file server 
-cloud‑enablement. It runs on Microsoft Windows Server and includes client agents
- for Windows, Mac OS X, web browsers and mobile devices (Android and iOS).
+Important: there is also a client application for Windows File Server called the *Server Agent*. That component is outside the scope of this guide.
 
-    Important: there is also a client application for Windows File Server called
- the *Server Agent*. That component is outside the scope of this guide.
+Overview
+--------
 
-    Overview
-    --------
+CentreStack differentiates itself from other file sync and share solutions by focusing on data security, permission controls and hybrid file server mobilization. Key capabilities include:
 
-    CentreStack differentiates itself from other file sync and share solutions 
-by focusing on data security, permission controls and hybrid file server 
-mobilization. Key capabilities include:
+- **Maintaining NTFS and Active Directory permissions** – user permissions and security inherit from your existing file servers.
+- **Live sync and versioning** – files are synchronized in real time with version control and revision history.
+- **On-demand access** – users access files directly from the server in real time; read-only and write permissions are honoured on demand.
+- **Mirroring network shares** – existing network shares can be published as team folders for collaboration without migration.
+- **Drive mapping & file locking** – the Windows client provides a mapped drive with file locking, version control and offline caching.
 
-    * **Maintaining NTFS and Active Directory permissions** – user permissions 
-and security inherit from your existing file servers.
-    * **Live sync and versioning** – files are synchronized in real time with 
-version control and revision history.
-    * **On‑demand access** – users access files directly from the server in real
- time; read‑only and write permissions are honoured on demand.
-    * **Mirroring network shares** – existing network shares can be published as
- Team Folders for collaboration without migration.
-    * **Drive mapping & file locking** – the Windows client provides a mapped 
- drive with file locking, version control and offline caching.
+Interface Overview
+------------------
 
-    Interface Overview
-    ------------------
+After signing in, administrators land on the **Cluster Dashboard**, which shows the cluster status and provides quick access to common tasks. The screenshot below highlights the major components.
 
-    After signing in, administrators land on the **Cluster Dashboard**, which 
-provides a summary of the CentreStack server status and quick access to common 
-administrative modules. The dashboard shows the cluster's host name, current 
-version, license status, and the number of connected tenants and users. It also 
-lists nodes in the server farm and displays icons for managing cluster admins, 
-group policies, branding settings, reports, billing, clients & applications, 
-server farm, and product tours.
+.. image:: cluster_dashboard.png
+   :alt: Cluster Dashboard overview
+   :width: 600px
 
-    .. image:: cluster_dashboard.png
-       :alt: Cluster Dashboard overview
-       :width: 600px
+Installation and Setup
+-----------------------
 
-    Installation and Setup
-    -----------------------
+This guide assumes that you have access to a Windows Server environment. To install the CentreStack server software:
 
-    CentreStack Server can be deployed on‑premises or in a private cloud. Basic 
-requirements include Windows Server 2016 or later, IIS, .NET Framework, and a 
-database (SQL Server or MySQL). The installer bundles required components, but 
-you may deploy the database separately.
+1. Ensure prerequisites are met: a supported Windows Server edition, IIS, .NET Framework 4.8 or later, and a SQL database (either SQL Server or MySQL).
+2. Download the CentreStack installer and run it on the server.
+3. Follow the setup wizard to install the server components.
+4. When prompted, configure the database connection (SQL Server or MySQL) and create or connect to an existing database.
+5. Specify the hostname and port for the web portal.
+6. Create the cluster administrator account with a strong password.
+7. Complete the installation and sign in to the web portal using the cluster admin credentials.
 
-    1. **Download and run the installer**. Obtain the CentreStack Server package
- from the official site and run it on a supported Windows Server. The setup 
-wizard installs the web components and prompts for a database connection.
-    2. **Configure the database**. You can choose to install a local SQL Express
- instance or point to an existing SQL Server/MySQL database. The database stores
- metadata, configuration and audit logs.
-    3. **Create the cluster administrator account**. During installation, 
-specify an email address and password for the cluster (master) administrator. 
-This account will manage tenants, storage and system settings.
-    4. **Complete installation and sign in**. After installation finishes, open 
-a browser to `https://your-server-address/portal`. Log in with the cluster 
-administrator credentials.
+Initial Configuration
+---------------------
 
-    Initial Configuration
-    ---------------------
+After installation, perform the following tasks to set up your first tenant and users:
 
-    After signing in, perform the following initial configuration tasks:
-
-    * **Create your first tenant**. In the Tenant Manager, click **Create 
-Tenant**, provide a tenant name, assign a tenant administrator email and choose 
-a plan. A tenant represents a customer or business unit and has its own users, 
-policies and storage.
-    * **Add storage connectors or Team Folders**. Connect file server shares or 
-cloud storage as Team Folders. When creating a Team Folder, specify the 
-underlying storage path (e.g., a network share or NAS) and choose how 
-permissions will be inherited from NTFS or assigned manually.
-    * **Invite users and groups**. Add native users manually or import existing 
-users and groups from Active Directory. Assign users to Team Folders and groups,
- and configure quotas and policies.
-    * **Test end‑user access**. Log in as a tenant administrator or regular user
- via the web portal, Windows client or mobile client. Verify that files are 
-accessible, changes synchronize correctly, and security settings (e.g., 
-read‑only) behave as expected.
-
-    Completing these steps provides a working CentreStack deployment ready for 
-further configuration and branding.
+1. Navigate to **Tenant Manager** and click **New Tenant**.
+2. Enter a name, administrator email, plan and storage settings, then proceed to create the tenant.
+3. In the newly created tenant, go to **Team Folders** and attach existing file server folders or cloud storage as team folders.
+4. Invite users and groups to the tenant. You can create native users or import users and groups from Active Directory.
+5. Test end-user access using the web portal and native clients to ensure the configuration works as expected.
