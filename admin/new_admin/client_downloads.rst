@@ -6,7 +6,10 @@ Users can download the latest client installers directly from the web portal. Th
 Desktop Clients
 ---------------
 
-Provide download links for Windows and Mac clients. You can generate custom installers that are pre‑configured for your cluster, and hide links for specific operating systems if they are not supported.
+Provide download links for Windows and Mac clients. You can generate custom installers that are pre‑configured for your cluster, and hide links for specific operating systems if they are not suppor
+
+ed.
+
 
 Mobile Apps
 -----------
@@ -17,3 +20,7 @@ Other Clients
 -------------
 
 If there are clients for other platforms (e.g., Linux, web browser extensions), they can be listed here with instructions for installation and configuration.
+
+   * **Generate pre‑configured installers** – For Windows and Mac clients, you can create custom installers that 
+
+pre‑configure the cluster URL, ensuring users can log in without manual setup.
