@@ -182,3 +182,41 @@ Folder & Storage settings define how data is stored and retained:
 * **Attached folder** – connect local directories on the server as Team Folders and control whether they inherit
   NTFS permissions.
 * **Background tasks** – manage scheduled tasks such as virus scanning, quota enforcement, and scheduled syncs.
+
+
+Timeouts & Limits
+-----------------
+The Cluster Settings page provides timeouts and limit settings that apply across the cluster. Administrators can configure:
+
+* **Web session timeout, token expiration and distributed lock idle timeout** – specify in minutes to control how long browser sessions, mobile/desktop tokens and distributed locks remain active【368951610685776†screenshot】.
+* **Notification frequency** – how often the server notifies the desktop client of file changes (in seconds)【368951610685776†screenshot】.
+* **Device limits** – maximum concurrent devices per user and number of days before inactive devices are purged from the system【368951610685776†screenshot】.
+* **Search results limit** – maximum number of file search results returned per query【368951610685776†screenshot】.
+
+Languages
+---------
+Administrators can enable or disable specific language packs and choose a cluster default. Supported languages include Chinese, German, French, Italian and Dutch【429436530000742†screenshot】. The cluster default is used for new tenants; tenants may still set their own language preferences.
+
+Branding Options
+----------------
+This tab provides simple options to hide tutorial videos and enable tenant-level branding【601177976076060†screenshot】. For full branding customization see :doc:`branding`.
+
+Change Log
+----------
+Configure how many days to retain file change logs and specify an email address and database connection string for cloud monitoring and logging【651974268771292†screenshot】.
+
+License String
+--------------
+Enter a license key to unlock user counts and features. After applying a valid key, the page displays the registered user count, licensee and expiration date【181972470491864†screenshot】.
+
+Anti‑Virus
+----------
+Select an anti‑virus engine to scan uploaded files. When set to **None** no scanning is performed【175956599893755†screenshot】.
+
+Application Integrations
+------------------------
+Enable **Office Web App** or **Zoho Web App** for online editing. Provide the Office Online Server endpoint or Zoho API key, choose whether to allow editing or view-only access and set the default viewer【115666094236083†screenshot】.
+
+Default Group Policy
+--------------------
+For details on default security, sharing and retention policies see :doc:`group_policy`.
