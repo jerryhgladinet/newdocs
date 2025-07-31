@@ -13,3 +13,6 @@ CentreStack Admin Guide
    branding
    client_downloads
    troubleshooting
+
+   cluster_settings
+   group_policy
