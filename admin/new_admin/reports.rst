@@ -13,11 +13,7 @@ Storage reports provide insight into overall storage consumption and growth. Adm
 * **Unused data** – identify data that hasn’t been accessed or modified recently to assist with cleanup and archiving.
 * **Export** – export storage statistics to CSV or PDF for further analysis or billing.
 
-The screenshot below shows the Storage Statistics report page.
-
-.. image:: reports_storage.png
-   :alt: Storage statistics report
-   :width: 600px
+    *(Image removed – a future update will include a screenshot of the Storage Statistics report page.)*
 
 User Activity
 -------------
@@ -29,11 +25,7 @@ User activity reports monitor how users interact with the system:
 * **Bandwidth usage** – track upload and download throughput per user or per device to identify heavy usage patterns.
 * **Collaboration metrics** – see how many files a user has created, modified, shared or commented on.
 
-Below is an example of the Active Users report.
-
-.. image:: reports_active_users.png
-   :alt: Active users report
-   :width: 600px
+    *(Image removed – a future update will include a screenshot of the Active Users report page.)*
 
 Audit Logs
 ----------
@@ -45,11 +37,7 @@ Audit logs capture detailed records of all file operations and administrative ac
 * **Authentication events** – user logins, logouts, failed logins and 2‑step verification attempts.
 * **Administrative actions** – changes to settings, creation or deletion of tenants, team folders, users and groups.
 
-A sample Audit Logs page is shown below.
-
-.. image:: reports_audit_logs.png
-   :alt: Audit logs page
-   :width: 600px
+    *(Image removed – a future update will include a screenshot of the Audit Logs page.)*
 
 Logs can be filtered by user, date range and activity type, and exported for compliance purposes.
 
