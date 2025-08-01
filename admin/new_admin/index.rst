@@ -3,17 +3,25 @@ CentreStack Admin Guide
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents
+   :caption: Overview
 
    getting_started
    administration_scope
-   tenant_management
-   settings
-   reports
-   branding
-   client_downloads
-   cluster_settings
-   group_policy
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Cluster Administration
+
    cluster_admin
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tenant Administration
+
    tenant_admin
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Appendix
+
    troubleshooting
