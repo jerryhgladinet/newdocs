@@ -14,4 +14,6 @@ CentreStack Admin Guide
    client_downloads
    cluster_settings
    group_policy
+   cluster_admin
+   tenant_admin
    troubleshooting
