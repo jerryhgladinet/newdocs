@@ -195,9 +195,7 @@ The Cluster Settings page provides timeouts and limit settings that apply across
 
 The figure below shows the **Timeouts & Limits** settings page.
 
-.. image:: settings_timeouts.png
-   :alt: Timeouts and limits settings page
-   :width: 600px
+*(Image removed – a future update will include a screenshot of the Timeouts & Limits settings page.)*
 
 Languages
 ---------
@@ -205,9 +203,7 @@ Administrators can enable or disable specific language packs and choose a cluste
 
 Below is the **Languages** settings page.
 
-.. image:: settings_languages.png
-   :alt: Languages settings page
-   :width: 600px
+*(Image removed – a future update will include a screenshot of the Languages settings page.)*
 
 Branding Options
 ----------------
@@ -215,46 +211,34 @@ This tab provides simple options to hide tutorial videos and enable tenant‑lev
 
 The screenshot below illustrates the **Branding Options** page.
 
-.. image:: settings_branding.png
-   :alt: Branding options settings page
-   :width: 600px
+*(Image removed – a future update will include a screenshot of the Branding Options page.)*
 
 Change Log
 ----------
 Configure how many days to retain file change logs and specify an email address and database connection string for cloud monitoring and logging.
 
-.. image:: settings_change_log.png
-   :alt: Change log settings page
-   :width: 600px
+*(Image removed – a future update will include a screenshot of the Change Log settings page.)*
 
 License String
 --------------
 Enter a license key to unlock user counts and features. After applying a valid key, the page displays the registered user count, licensee and expiration date.
 
-.. image:: settings_license.png
-   :alt: License string settings page
-   :width: 600px
+*(Image removed – a future update will include a screenshot of the License String settings page.)*
 
 Anti‑Virus
 ----------
 Select an anti‑virus engine to scan uploaded files. When set to **None** no scanning is performed.
 
-.. image:: settings_antivirus.png
-   :alt: Anti‑Virus settings page
-   :width: 600px
+*(Image removed – a future update will include a screenshot of the Anti‑Virus settings page.)*
 
 Application Integrations
 ------------------------
 Enable **Office Web App** or **Zoho Web App** for online editing. Provide the Office Online Server endpoint or Zoho API key, choose whether to allow editing or view‑only access and set the default viewer.
 
-.. image:: settings_app_integrations.png
-   :alt: Application Integrations settings page
-   :width: 600px
+*(Image removed – a future update will include a screenshot of the Application Integrations settings page.)*
 
 Default Group Policy
 --------------------
 For details on default security, sharing and retention policies see :doc:`group_policy`.
 
-.. image:: settings_group_policy.png
-   :alt: Default group policy settings page
-   :width: 600px
+*(Image removed – a future update will include a screenshot of the Default Group Policy page.)*
