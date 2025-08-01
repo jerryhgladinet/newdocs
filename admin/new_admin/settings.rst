@@ -193,30 +193,68 @@ The Cluster Settings page provides timeouts and limit settings that apply across
 * **Device limits** – maximum concurrent devices per user and number of days before inactive devices are purged from the system.
 * **Search results limit** – maximum number of file search results returned per query.
 
+The figure below shows the **Timeouts & Limits** settings page.
+
+.. image:: settings_timeouts.png
+   :alt: Timeouts and limits settings page
+   :width: 600px
+
 Languages
 ---------
 Administrators can enable or disable specific language packs and choose a cluster default. Supported languages include Chinese, German, French, Italian and Dutch. The cluster default is used for new tenants; tenants may still set their own language preferences.
 
+Below is the **Languages** settings page.
+
+.. image:: settings_languages.png
+   :alt: Languages settings page
+   :width: 600px
+
 Branding Options
 ----------------
-This tab provides simple options to hide tutorial videos and enable tenant-level branding. For full branding customization see :doc:`branding`.
+This tab provides simple options to hide tutorial videos and enable tenant‑level branding. For full branding customisation see :doc:`branding`.
+
+The screenshot below illustrates the **Branding Options** page.
+
+.. image:: settings_branding.png
+   :alt: Branding options settings page
+   :width: 600px
 
 Change Log
 ----------
 Configure how many days to retain file change logs and specify an email address and database connection string for cloud monitoring and logging.
 
+.. image:: settings_change_log.png
+   :alt: Change log settings page
+   :width: 600px
+
 License String
 --------------
 Enter a license key to unlock user counts and features. After applying a valid key, the page displays the registered user count, licensee and expiration date.
+
+.. image:: settings_license.png
+   :alt: License string settings page
+   :width: 600px
 
 Anti‑Virus
 ----------
 Select an anti‑virus engine to scan uploaded files. When set to **None** no scanning is performed.
 
+.. image:: settings_antivirus.png
+   :alt: Anti‑Virus settings page
+   :width: 600px
+
 Application Integrations
 ------------------------
-Enable **Office Web App** or **Zoho Web App** for online editing. Provide the Office Online Server endpoint or Zoho API key, choose whether to allow editing or view-only access and set the default viewer.
+Enable **Office Web App** or **Zoho Web App** for online editing. Provide the Office Online Server endpoint or Zoho API key, choose whether to allow editing or view‑only access and set the default viewer.
+
+.. image:: settings_app_integrations.png
+   :alt: Application Integrations settings page
+   :width: 600px
 
 Default Group Policy
 --------------------
 For details on default security, sharing and retention policies see :doc:`group_policy`.
+
+.. image:: settings_group_policy.png
+   :alt: Default group policy settings page
+   :width: 600px
