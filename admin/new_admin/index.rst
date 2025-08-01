@@ -12,7 +12,6 @@ CentreStack Admin Guide
    reports
    branding
    client_downloads
-   troubleshooting
-
    cluster_settings
    group_policy
+   troubleshooting

@@ -61,13 +61,13 @@ behaviour. Administrators can enable protection and configure thresholds for aut
 
 * Specify the number of file changes within a time window that triggers the system to disable a device.
 * Define **allowed processes** that are permitted to modify files without triggering protection, and
-  **blocked processes** that are known ransomware threats【156897380247261†screenshot】.
+  **blocked processes** that are known ransomware threats.
 * Ignore certain file patterns or file name extensions (e.g. `~$` temporary files or `.ldb` locking files)
   to avoid false positives.
 * Disable uploading files containing specific strings in their names (e.g. `.encr`).
 * Schedule background sync for specific file extensions so these files are uploaded only periodically.
 
-Events captured by ransomware protection can be viewed under the **Ransomware Protection Events** page【156897380247261†screenshot】.
+Events captured by ransomware protection can be viewed under the **Ransomware Protection Events** page.
 
 File Locking
 ------------
@@ -75,20 +75,20 @@ File Locking
 Distributed file locking prevents conflicts when multiple users access the same document from different
 clients. The **File Locking** settings include:
 
-* **Enable distributed locking** – turn on file locking across Windows, Mac and web clients【278628417381662†screenshot】.
+* **Enable distributed locking** – turn on file locking across Windows, Mac and web clients.
 * **Lock file exclusively** – when enabled, users must obtain a lock before editing; others open the file
-  in read‑only mode【278628417381662†screenshot】.
-* **Read‑only on lock** – automatically open the file in read‑only mode if it is already locked by another user【278628417381662†screenshot】.
-* **Delay sync until unlock** – delay synchronization of changes until the file is unlocked to avoid conflict【278628417381662†screenshot】.
-* **Auto‑unlock after upload** – automatically release the lock once the edited file is uploaded【278628417381662†screenshot】.
+  in read‑only mode.
+* **Read‑only on lock** – automatically open the file in read‑only mode if it is already locked by another user.
+* **Delay sync until unlock** – delay synchronization of changes until the file is unlocked to avoid conflict.
+* **Auto‑unlock after upload** – automatically release the lock once the edited file is uploaded.
 * **Native locking** – enable native file locking for files stored in attached folders to honour NTFS
-  locking semantics【278628417381662†screenshot】.
-* **Office Web Apps integration** – automatically lock the file when it is opened in Office Web Apps【278628417381662†screenshot】.
-* **Hide lock lost messages** – suppress lock lost notifications on the client【278628417381662†screenshot】.
+  locking semantics.
+* **Office Web Apps integration** – automatically lock the file when it is opened in Office Web Apps.
+* **Hide lock lost messages** – suppress lock lost notifications on the client.
 * **Scheduled sync** – define a list of file extensions (e.g. `.mdb`, `.qbw`) that should be synchronized at
-  scheduled intervals rather than instantly【278628417381662†screenshot】.
+  scheduled intervals rather than instantly.
 * **Process filters** – specify the list of desktop processes that support native locking (e.g. `winword.exe`,
-  `excel.exe`) and processes to exclude【278628417381662†screenshot】.
+  `excel.exe`) and processes to exclude.
 
 Data Leak Protection
 --------------------
@@ -97,12 +97,12 @@ Data Leak Protection (DLP) enforces policies to prevent unauthorised sharing or 
 In the DLP settings you can manage:
 
 * **Client Access Policy** – control whether users can download, print or sync files; restrict access to
-  specific networks or devices; and enforce remote wipe on lost devices【143794239499119†screenshot】.
+  specific networks or devices; and enforce remote wipe on lost devices.
 * **Sharing policies** – define rules for external sharing (e.g. require passwords for share links or
-  disallow public links)【143794239499119†screenshot】.
-* **Watermark** – apply watermarks to documents viewed via the web portal to deter screenshots【820686683126474†screenshot】.
-* **Shared Objects** – view and manage all externally shared files and folders【820686683126474†screenshot】.
-* **DLP Events** – review events that triggered DLP policies and take action【820686683126474†screenshot】.
+  disallow public links).
+* **Watermark** – apply watermarks to documents viewed via the web portal to deter screenshots.
+* **Shared Objects** – view and manage all externally shared files and folders.
+* **DLP Events** – review events that triggered DLP policies and take action.
 
 Notifications
 -------------
@@ -110,13 +110,13 @@ Notifications
 CentreStack can send email notifications to administrators and users about system events. You can
 configure:
 
-* **Daily summary** – receive a daily email summarizing file changes, audit traces and guest user counts【479631871900732†screenshot】.
-* **Quota warnings** – notify tenant administrators when storage usage approaches a specified threshold【479631871900732†screenshot】.
-* **Sync task failures** – alert administrators when scheduled sync tasks fail【479631871900732†screenshot】.
-* **Share notifications** – notify administrators when a member shares a folder or sends a public link【479631871900732†screenshot】.
-* **Account lockouts** – email an administrator when a user account is locked due to failed logins【479631871900732†screenshot】.
-* **Hide desktop notifications** – suppress file change notifications on Windows and Mac clients【479631871900732†screenshot】.
-* **Additional recipients** – specify additional email addresses to receive copies of notifications【479631871900732†screenshot】.
+* **Daily summary** – receive a daily email summarizing file changes, audit traces and guest user counts.
+* **Quota warnings** – notify tenant administrators when storage usage approaches a specified threshold.
+* **Sync task failures** – alert administrators when scheduled sync tasks fail.
+* **Share notifications** – notify administrators when a member shares a folder or sends a public link.
+* **Account lockouts** – email an administrator when a user account is locked due to failed logins.
+* **Hide desktop notifications** – suppress file change notifications on Windows and Mac clients.
+* **Additional recipients** – specify additional email addresses to receive copies of notifications.
 
 Email Service
 -------------
@@ -124,7 +124,7 @@ Email Service
 By default CentreStack uses its own mail service to send verification codes and notifications. You can
 configure an external SMTP server under **Email Service**. Provide the SMTP server address and port,
 choose whether to use SSL/TLS, specify the “from” address and supply authentication credentials (username
-and password). CentreStack will then relay all outgoing emails through your SMTP service【978371934945662†screenshot】.
+and password). CentreStack will then relay all outgoing emails through your SMTP service.
 
 SharePoint Online Integration
 -----------------------------
@@ -136,7 +136,7 @@ following parameters obtained from your Azure AD application registration:
 * **Client Secret** – the client secret generated for the application.
 * **Tenant ID or name** – your Azure AD tenant identifier.
 * **Callback URL** – the URL in CentreStack that Microsoft will call back after authentication. This must match
-  the redirect URL configured in Azure AD【362982118107194†screenshot】.
+  the redirect URL configured in Azure AD.
 
 Once configured, SharePoint document libraries can be added as Team Folders.
 
@@ -146,7 +146,7 @@ Clients & Applications
 The **Clients & Applications** settings control integrations with external applications and client behaviour.
 
 * **Office 365 Integration** – allow users to open Office documents with Microsoft Office 365 from the web portal.
-  You can optionally force documents opened from the Windows desktop client to use Office 365 as well【404820563778666†screenshot】.
+  You can optionally force documents opened from the Windows desktop client to use Office 365 as well.
 * **Default Document Viewer** – choose whether the built‑in document viewer is used for previews or rely on
   native applications.
 * **Client settings** – configure options such as offline caching, bandwidth throttling and automatic update policy
@@ -163,7 +163,7 @@ Within **User Account & Security** administrators manage user accounts and secur
 * **Tenant administrators & user management** – create and manage tenant administrators and regular users, reset
   passwords, set storage quotas and disable accounts.
 * **Password policy** – define the minimum password length, expiration interval and complexity requirements
-  (uppercase, lowercase, digits and special characters)【907050720964230†screenshot】.
+  (uppercase, lowercase, digits and special characters).
 * **Access control** – restrict sign‑ins to certain IP addresses, networks or time windows; enforce session timeouts.
 * **Security options** – enable device approval workflows and control how many devices a user may register.
 * **Home directory** – specify a default home directory for new users and optionally allow custom home directories.
@@ -188,34 +188,34 @@ Timeouts & Limits
 -----------------
 The Cluster Settings page provides timeouts and limit settings that apply across the cluster. Administrators can configure:
 
-* **Web session timeout, token expiration and distributed lock idle timeout** – specify in minutes to control how long browser sessions, mobile/desktop tokens and distributed locks remain active【368951610685776†screenshot】.
-* **Notification frequency** – how often the server notifies the desktop client of file changes (in seconds)【368951610685776†screenshot】.
-* **Device limits** – maximum concurrent devices per user and number of days before inactive devices are purged from the system【368951610685776†screenshot】.
-* **Search results limit** – maximum number of file search results returned per query【368951610685776†screenshot】.
+* **Web session timeout, token expiration and distributed lock idle timeout** – specify in minutes to control how long browser sessions, mobile/desktop tokens and distributed locks remain active.
+* **Notification frequency** – how often the server notifies the desktop client of file changes (in seconds).
+* **Device limits** – maximum concurrent devices per user and number of days before inactive devices are purged from the system.
+* **Search results limit** – maximum number of file search results returned per query.
 
 Languages
 ---------
-Administrators can enable or disable specific language packs and choose a cluster default. Supported languages include Chinese, German, French, Italian and Dutch【429436530000742†screenshot】. The cluster default is used for new tenants; tenants may still set their own language preferences.
+Administrators can enable or disable specific language packs and choose a cluster default. Supported languages include Chinese, German, French, Italian and Dutch. The cluster default is used for new tenants; tenants may still set their own language preferences.
 
 Branding Options
 ----------------
-This tab provides simple options to hide tutorial videos and enable tenant-level branding【601177976076060†screenshot】. For full branding customization see :doc:`branding`.
+This tab provides simple options to hide tutorial videos and enable tenant-level branding. For full branding customization see :doc:`branding`.
 
 Change Log
 ----------
-Configure how many days to retain file change logs and specify an email address and database connection string for cloud monitoring and logging【651974268771292†screenshot】.
+Configure how many days to retain file change logs and specify an email address and database connection string for cloud monitoring and logging.
 
 License String
 --------------
-Enter a license key to unlock user counts and features. After applying a valid key, the page displays the registered user count, licensee and expiration date【181972470491864†screenshot】.
+Enter a license key to unlock user counts and features. After applying a valid key, the page displays the registered user count, licensee and expiration date.
 
 Anti‑Virus
 ----------
-Select an anti‑virus engine to scan uploaded files. When set to **None** no scanning is performed【175956599893755†screenshot】.
+Select an anti‑virus engine to scan uploaded files. When set to **None** no scanning is performed.
 
 Application Integrations
 ------------------------
-Enable **Office Web App** or **Zoho Web App** for online editing. Provide the Office Online Server endpoint or Zoho API key, choose whether to allow editing or view-only access and set the default viewer【115666094236083†screenshot】.
+Enable **Office Web App** or **Zoho Web App** for online editing. Provide the Office Online Server endpoint or Zoho API key, choose whether to allow editing or view-only access and set the default viewer.
 
 Default Group Policy
 --------------------
