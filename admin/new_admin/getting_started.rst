@@ -48,16 +48,14 @@ Once CentreStack is installed, open a browser to access the web portal. If you a
 
    The login page displays the CentreStack build number in the lower right corner and prompts for the cluster administrator credentials you created earlier. The screenshot below shows the default login page.
 
-.. image:: login_page.png
-   :alt: CentreStack login page
-   :width: 600px
+*(Image removed – a future update will include a screenshot of the login page.)*
 
 First page: Tenant Manager
 --------------------------
 
 After successful login you land on the **Tenant Manager**. This page lists existing tenants and allows you to create new ones, assign administrators, view storage usage and check security alerts. If only one tenant exists, the Tenant Manager acts as both cluster and tenant administration portal. From the Tenant Manager you can navigate to other modules such as Settings, Reports and Branding.
 
-.. image:: tenant_manager.png
+.. image:: _static/tenant_manager.png
    :alt: Tenant Manager page
    :width: 600px
 
