@@ -1,0 +1,5 @@
+(Screenshot placeholder: cluster-policy-clicked-client-settings-mac-client-settings-detail-view.png – shows the **Client Settings Manager** page within the Default Group Policy.  
+The breadcrumb at the top reads **Tenant Manager > Cluster Dashboard > Default Group Policy**.  
+This screen includes a **Windows Client Shutdown Script** field with a **Choose File** button for uploading a script.  
+Below, a section labelled **Mac Client Settings** contains two checkboxes: **Do not show Mac Client sync status pop‑up dialog** (unchecked) and **Start Mac client automatically** (checked).  
+This page allows administrators to configure behaviour of the CentreStack Mac client alongside the Windows shutdown script.)
