@@ -1,0 +1,5 @@
+(Screenshot placeholder: cluster-policy-clicked-client-settings-client-shutdown-script-detail-view.png – shows the **Client Settings Manager** page under the Default Group Policy.  
+There is a breadcrumb trail at the top reading **Tenant Manager > Cluster Dashboard > Default Group Policy**.  
+Within the page, a section labelled **Client Shutdown Script** appears with a field named **Windows Client Shutdown Script**.  A **Choose File** button and “No file chosen” text indicate you can upload a script to run when the Windows client shuts down.  
+Below this section is another heading **Mac Client Settings**, ready for additional options.  
+This page helps administrators configure shutdown or logout scripts for the CentreStack desktop clients.)
