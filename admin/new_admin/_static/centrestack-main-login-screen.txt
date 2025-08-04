@@ -1,0 +1,1 @@
+ (Screenshot placeholder: centrestack-main-login-screen.png – shows the CentreStack login page with a starry background.  The page title reads **"Sign In"**, there are fields for your username or email and password, a **Forgot your password?** link, and a blue **Sign In** button.  The build number appears in the bottom right corner.)
