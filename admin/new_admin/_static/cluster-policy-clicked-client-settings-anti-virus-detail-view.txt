@@ -1,0 +1,7 @@
+ (Screenshot placeholder: cluster-policy-clicked-client-settings-anti-virus-detail-view.png – Depicts the **Anti Virus/Ransomware** settings tab under *Client Settings Manager* in Default Group Policy.  The breadcrumb shows “Tenant Manager > Cluster Dashboard > Default Group Policy > Anti Virus/Ransomware.”  The page contains several text fields where administrators can list process names or file patterns to control how the desktop client responds to ransomware behaviour.  Key fields include:  
+ • “Only allow the following processes to update files” – a text box to whitelist processes allowed to update files (leave empty to allow all).  
+ • “The following executables will not be allowed to open files directly from the cloud drive” – a text box to blacklist executable names.  
+ • “Disable a device if the device changes more than n files in 10 minutes” – numerical field to define the threshold for ransomware activity.  
+ • “Ignore the following processes when applying the above policy” – list of processes to ignore when evaluating file‑change behaviour.  
+ • Three additional fields to disable uploading of files whose names contain, start with or end with certain strings (e.g. badfile1;badfile2).  
+ This screenshot features multiple grey and white rows with blue underlines where you can type values for each rule.)
