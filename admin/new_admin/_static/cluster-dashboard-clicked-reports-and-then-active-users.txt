@@ -1,0 +1,1 @@
+ (Screenshot placeholder: cluster-dashboard-clicked-reports-and-then-active-users.png – **Active Users** report tab under **Reports**.  Displays a table of currently logged‑in users with columns **Name**, **Email**, **Last Access**, **Session Create**, and **Worker Node**.  If no users are connected, the table is empty.)

@@ -1,0 +1,1 @@
+ (Screenshot placeholder: cluster-dashboard-clicked-languages-view.png – **Languages** management page.  A drop‑down menu under **Step 1: Select a language to manage** lists available languages (e.g., Afar (aa) as default).  After selecting a language, a link labelled **Set Language** allows you to apply the language to the cluster for custom translations.)
