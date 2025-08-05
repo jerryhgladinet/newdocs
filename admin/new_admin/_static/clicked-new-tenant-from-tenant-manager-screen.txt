@@ -1,0 +1,1 @@
+ (Screenshot placeholder: clicked-new-tenant-from-tenant-manager-screen.png – first screen of the **Add New Tenant** wizard.  It offers two options: **Add New Tenant from Scratch** and **Migrate from Anchor**, each represented by a large tile with an icon and plus sign.  A **Cancel** link appears at the bottom of the page.)
