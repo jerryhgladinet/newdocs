@@ -104,7 +104,8 @@ name or external URL during installation, use that address instead.
    corner and prompts for the cluster administrator credentials you created 
    earlier.
 
-``(Screenshot placeholder: centrestack‑main‑login‑screen.png – shows the default CentreStack login screen with the title **"Sign In"**, input boxes for username and password, a **Sign In** button and the build number in the lower right corner.)``
+.. image:: _static/centrestack-main-login-screen.png
+   :alt: shows the default CentreStack login screen with the title **Sign In**, input boxes for username and password, a **Sign In** button and the build number in the lower right corner
 
 First page: Tenant Manager
 --------------------------
@@ -116,7 +117,8 @@ Manager acts as both cluster and tenant administration portal. From the Tenant
 Manager you can navigate to other modules such as Settings, Reports and 
 Branding.
 
-``(Screenshot placeholder: cluster‑admin‑main‑interface‑after‑login‑multi‑tenancy.png – shows the Tenant Manager page with a **New Tenant** tile (plus icon) and cards for existing tenants.  The blue banner displays trial days left and navigation icons.)``
+.. image:: _static/cluster-admin-main-interface-after-login-multi-tenancy.png
+   :alt: **Tenant Manager** page with a **New Tenant** tile (plus icon), cards for existing tenants and a blue banner displaying trial days left and navigation icons
 
 Cluster Dashboard Overview
 --------------------------
@@ -128,7 +130,8 @@ common administrative tasks such as cluster branding, group policy and reports.
 You can reach the dashboard by clicking the **Dashboard** button in the 
 navigation menu.
 
-``(Screenshot placeholder: cluster‑admin‑main‑interface‑after‑login‑multi‑tenancy.png – same as above; shows the Cluster Dashboard.  Labels and graphs highlight licence usage, node health and quick links to Branding, Group Policy and Reports.)``
+.. image:: _static/cluster-admin-main-interface-after-login-multi-tenancy.png
+   :alt: **Cluster Dashboard** view showing licence usage, node health and quick links to Branding, Group Policy and Reports
 
 Next Steps
 ----------
