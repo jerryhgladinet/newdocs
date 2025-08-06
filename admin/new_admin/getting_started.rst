@@ -66,7 +66,7 @@ CentreStack administration builds on three other guides that address
 installation, deployment and high‑level orientation. Read or skim these guides 
 first:
 
-* **`Quick Start Guide`_** – Provides a high‑level overview of CentreStack and the 
+*  **`Quick Start Guide <https://cdn.centrestack.com/mobi5/web/library/quick-start/index.html>`__** – Provides a high‑level overview of CentreStack and the 
   problems it solves. The guide explains the three deployment models – 
   **On‑premises self‑hosted**, **data‑centre MSP‑hosted** and **cloud 
   SaaS‑hosted** – and describes the benefits of each. It also walks you through 
