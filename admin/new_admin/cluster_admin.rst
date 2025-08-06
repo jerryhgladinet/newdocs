@@ -55,6 +55,67 @@ Click the **New Tenant** tile and choose **Add New Tenant** to start the wiza
 .. image:: _static/tenant-scope-per-tenant-teamfolder-clicked-add-teamfolder-screen1.png
    :alt: **Storage Options** step of the tenant creation wizard showing radio buttons for Existing Tenant Storage, File Servers in LAN, Remote File Servers and Cloud Storage (S3/Azure/Wasabi)
 
+Cluster Admins
+--------------
+
+The **Cluster Admins** link on the dashboard opens a page where you can view and manage the administrators of your CentreStack cluster.  Each administrator is listed with their email address and last login time, and you can add or remove cluster admins as needed.  Use this page to delegate administration tasks to other trusted users without granting them tenant‑level rights.
+
+.. image:: _static/cluster-dashboard-clicked-cluster-admin.png
+   :alt: Cluster Admins page listing existing administrators with options to add or remove admins
+
+Application Manager
+-------------------
+
+The **Application Manager** integrates third‑party document viewers into CentreStack.  Two panels allow you to configure Microsoft Office Web App and Zoho Web App.  For each integration you supply the Office Online Server access point or Zoho API key and choose whether documents open in view‑only mode or use the selected service as the default viewer.  This feature enables seamless online editing and viewing of Office documents within the CentreStack portal.
+
+.. image:: _static/cluster-dashboard-clicked-application-manager-view.png
+   :alt: Application Manager page with panels for Microsoft Office Web App and Zoho Web App showing fields for server URL or API key and check boxes to set the default viewer
+
+Languages
+---------
+
+CentreStack supports multiple language packs.  The **Languages** link displays a list of available languages (such as Chinese, German, French, Italian and Dutch) with toggles to enable or disable each pack.  You can also select a cluster‑wide default language.  Enabling language packs allows end‑users to switch the portal UI to their preferred language.
+
+.. image:: _static/cluster-dashboard-clicked-languages-view.png
+   :alt: Languages page listing supported language packs with toggles to enable or disable each and a selector for the default language
+
+Anti‑Virus
+----------
+
+Use the **Anti‑Virus** page to choose an antivirus engine for scanning files uploaded through worker nodes.  Setting the engine to **None** disables scanning, while selecting an integrated engine provides automatic virus scanning of uploaded files.  This setting protects your cluster from malicious content without requiring third‑party antivirus software.
+
+.. image:: _static/cluster-dashboard-clicked-anti-virus-view.png
+   :alt: Anti‑Virus settings page allowing administrators to select or disable the built‑in antivirus engine for file scanning
+
+Multi‑Tenancy Toggle
+--------------------
+
+At the bottom of the right‑hand panel on the Cluster Dashboard is a switch that toggles **Multi‑Tenancy** on or off.  When enabled, the cluster can host multiple isolated tenants.  Switching to single‑tenant mode restricts the environment to a single organisation.  Use this control when converting a test deployment into a production environment or when simplifying administration for a single organisation.
+
+External DNS & Email Service
+----------------------------
+
+The **External DNS** link lets you configure the public DNS name or fully qualified domain name (FQDN) used by clients to access the CentreStack portal.  Clicking the edit icon opens a dialog where you enter the external URL.  Similarly, the **Email Service** page allows you to configure SMTP settings (host, port, credentials and encryption) for sending invitation emails, notifications and password resets.
+
+.. image:: _static/cluster-dashboard-clicked-external-dns-edit-icon-to-edit-exernal-url-dialog-view.png
+   :alt: External DNS configuration dialog with fields to specify the cluster’s public URL
+
+Worker Nodes
+------------
+
+Worker nodes perform file processing and handle background tasks for the cluster.  The **Worker Nodes** link lists all worker nodes, showing their status, role and assigned zones.  From this page you can add new nodes, remove offline nodes or assign nodes to geographic zones for multi‑region deployments.
+
+.. image:: _static/cluster-dashboard-clicked-worker-node-to-node-list-view.png
+   :alt: Worker Nodes list displaying each node with its status and actions to add or remove nodes or assign zones
+
+Client Version Manager
+----------------------
+
+The **Client Version Manager** allows cluster administrators to publish and manage the versions of the CentreStack clients available for download.  Separate tabs let you configure the Windows client, Server Agent and macOS client.  For each client type you specify the version number and package path of the installer, set a daily upgrade limit, and define email lists for users who should or should not receive automatic upgrades.  When you publish a new version, existing clients will automatically update according to the configured schedule.
+
+.. image:: _static/cluster-dashboard-clicked-windows-client-to-get-to-client-version-manager.png
+   :alt: Client Version Manager displaying the Windows client tab with fields for version number, package path, daily upgrade limit and user lists, plus a publish link to push updates
+
 Cluster Branding
 ----------------
 
