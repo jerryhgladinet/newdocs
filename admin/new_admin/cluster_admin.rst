@@ -6,7 +6,9 @@ This section describes cluster‑level administration tasks for CentreStack.  It
 .. note::
    In CentreStack's multi‑tenant architecture, the term *cluster* refers to the server farm that hosts all tenants.  The cluster administrator manages system‑wide settings, tenant provisioning, branding, reports, worker/web nodes and policies.
 
-Introduction
+.. _cluster-admin-introduction:
+
+Cluster Introduction
 ------------
 
 To access cluster administration features, sign in to the web portal as the cluster administrator.  The login URL is the DNS name or IP address of your CentreStack server.
@@ -63,7 +65,9 @@ The **Cluster Admins** link on the dashboard opens a page where you can view an
 .. image:: _static/cluster-dashboard-clicked-cluster-admin.png
    :alt: Cluster Admins page listing existing administrators with options to add or remove admins
 
-Default Group Policy
+.. _cluster-admin-default-group-policy:
+
+Cluster Default Group Policy
 --------------------
 
 The **Default Group Policy** defines baseline policies that apply to all tenants unless overridden by a tenant administrator.  Categories include:
@@ -77,9 +81,9 @@ The **Default Group Policy** defines baseline policies that apply to all tenan
 * **Folder & Storage** – control default storage types, enable versioning and attachments for files and folders.
 * **Client Control** – limit client types, enforce client version updates and control other client behaviours.
 
-.. image:: _static/cluster-policy-clicked-security-item-detail-view.png
+.. image:: _static/cluster-policy-clicked-security-detail-view.png
    :alt: **Security** category of the Default Group Policy showing options such as notifying users when their email changes, re‑authenticating on network change, enabling Google sign‑in, allowing impersonation and forcing uploads/downloads through worker nodes
-.. image:: _static/cluster-policy-clicked-sharing-detail-view.png
+.. image:: _static/cluster-policy-clicked-sharing-detailed-view-part1.png
    :alt: **Sharing** category of the Default Group Policy with settings to require login for shared files, disable external sharing of home directories, enable internal share URLs, disable public links and control guest creation and user lists in share dialogs
 
 These policies apply system‑wide.  Tenant administrators can override them on a per‑tenant basis, but the default group policy provides a sensible baseline for security and usability across the cluster.
@@ -105,7 +109,9 @@ Under **Cluster Branding** you can customise the look and feel of the web porta
 .. image:: _static/cluster-dashboard-clicked-cluster-branding-then-client-download-detail-view.png
    :alt: **Client Download** tab of Cluster Branding with toggle buttons for each client type (Windows, Server Agent, macOS, iOS, Android) and fields for custom App Store and Play Store URLs
 
-Cluster Settings
+.. _cluster-admin-cluster-settings:
+
+Cluster Settings Overview
 ----------------
 
 Within **Cluster Settings** there are multiple tabs:
@@ -134,7 +140,9 @@ The **Application Manager** integrates third‑party document viewers into Cent
 .. image:: _static/cluster-dashboard-clicked-application-manager-view.png
    :alt: Application Manager page with panels for Microsoft Office Web App and Zoho Web App showing fields for server URL or API key and check boxes to set the default viewer
 
-Languages
+.. _cluster-admin-languages:
+
+Language Packs
 ---------
 
 CentreStack supports multiple language packs.  The **Languages** link displays a list of available languages (such as Chinese, German, French, Italian and Dutch) with toggles to enable or disable each pack.  You can also select a cluster‑wide default language.  Enabling language packs allows end‑users to switch the portal UI to their preferred language.
@@ -142,7 +150,9 @@ CentreStack supports multiple language packs.  The **Languages** link displays a
 .. image:: _static/cluster-dashboard-clicked-languages-view.png
    :alt: Languages page listing supported language packs with toggles to enable or disable each and a selector for the default language
 
-Anti‑Virus
+.. _cluster-admin-anti-virus:
+
+Cluster Anti‑Virus
 ----------
 
 Use the **Anti‑Virus** page to choose an antivirus engine for scanning files uploaded through worker nodes.  Setting the engine to **None** disables scanning, while selecting an integrated engine provides automatic virus scanning of uploaded files.  This setting protects your cluster from malicious content without requiring third‑party antivirus software.
@@ -150,7 +160,9 @@ Use the **Anti‑Virus** page to choose an antivirus engine for scanning files u
 .. image:: _static/cluster-dashboard-clicked-anti-virus-view.png
    :alt: Anti‑Virus settings page allowing administrators to select or disable the built‑in antivirus engine for file scanning
 
-Reports
+.. _cluster-admin-reports:
+
+Cluster Reports
 -------
 
 Cluster reports provide visibility into usage and performance.
@@ -200,7 +212,9 @@ The **Client Version Manager** allows cluster administrators to publish and ma
 .. image:: _static/cluster-dashboard-clicked-windows-client-to-get-to-client-version-manager.png
    :alt: Client Version Manager displaying the Windows client tab with fields for version number, package path, daily upgrade limit and user lists, plus a publish link to push updates
 
-Summary
+.. _cluster-admin-summary:
+
+Cluster Administration Summary
 -------
 
 Cluster administration involves managing the overall system: provisioning tenants, configuring branding and system settings, monitoring usage through reports, maintaining worker and web nodes and applying global policies.  Each of these tasks is performed via the web portal when signed in as the cluster administrator.
