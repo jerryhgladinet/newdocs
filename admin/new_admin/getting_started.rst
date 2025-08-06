@@ -130,8 +130,8 @@ common administrative tasks such as cluster branding, group policy and reports.
 You can reach the dashboard by clicking the **Dashboard** button in the 
 navigation menu.
 
-.. image:: _static/cluster-admin-main-interface-after-login-multi-tenancy.png
-   :alt: **Cluster Dashboard** view showing licence usage, node health and quick links to Branding, Group Policy and Reports
+.. image:: _static/cluster-admin-clicked-cluster-dashboard.png
+   :alt: **Cluster Dashboard** view summarising licence usage, server and worker node health, client versions and providing quick links to cluster branding, group policy and reports
 
 Next Steps
 ----------

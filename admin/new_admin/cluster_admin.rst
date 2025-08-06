@@ -16,8 +16,8 @@ To access cluster administration features, sign in to the web portal as the clus
 
 After login, the **Cluster Dashboard** presents a summary of your environment.  It displays counts of tenants, users and assigned licences, the remaining trial days, and icons for navigation (Cluster Dashboard, Files, Settings, etc.).
 
-.. image:: _static/cluster-admin-main-interface-after-login-multi-tenancy.png
-   :alt: **Cluster Dashboard** page after login with a blue banner showing trial days and navigation.  Tenant cards display user and storage counts, and a **New Tenant** tile with a plus icon sits on the left.  Icons for Tenant Manager, Reports and Settings appear at the top
+.. image:: _static/cluster-admin-clicked-cluster-dashboard.png
+   :alt: **Cluster Dashboard** page summarising counts of tenants, users and assigned licences, remaining trial days and navigation icons for Dashboard, Files and Settings
 
 Tenant Manager
 --------------
