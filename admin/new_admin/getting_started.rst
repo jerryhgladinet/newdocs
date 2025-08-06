@@ -66,23 +66,20 @@ CentreStack administration builds on three other guides that address
 installation, deployment and high‑level orientation. Read or skim these guides 
 first:
 
-* **`Quick Start Guide <https://cdn.centrestack.com/mobi5/web/library/quick-
-start/index.html>`_** – Provides a high‑level overview of CentreStack and the 
+* **`Quick Start Guide <https://cdn.centrestack.com/mobi5/web/library/quick-start/index.html>`_** – Provides a high‑level overview of CentreStack and the 
   problems it solves. The guide explains the three deployment models – 
   **On‑premises self‑hosted**, **data‑centre MSP‑hosted** and **cloud 
   SaaS‑hosted** – and describes the benefits of each. It also walks you through 
   registering for a partner account, accessing the partner portal and setting up a
   trial environment.
-* **`Installation Guide 
-<https://cdn.centrestack.com/mobi5/web/library/install/index.html>`_** – Offers 
+* **`Installation Guide <https://cdn.centrestack.com/mobi5/web/library/install/index.html>`_** – Offers 
   step‑by‑step instructions for installing the CentreStack server on Windows 
   Server. It covers prerequisites such as preparing file storage, optional 
   Active Directory integration, configuring a SQL Server or MySQL database, 
   running the installer and completing the initial setup. After following the 
   Installation Guide you will have a working CentreStack server and a cluster 
   administrator account.
-* **`Deployment Guide 
-<https://cdn.centrestack.com/mobi5/web/library/deploy/index.html>`_** – Focuses 
+* **`Deployment Guide <https://cdn.centrestack.com/mobi5/web/library/deploy/index.html>`_** – Focuses 
   on planning and sizing your CentreStack deployment. It discusses terminology, 
   system requirements, hardware sizing, capacity planning, load balancing and 
   deployment scenarios for on‑premises, hosted and cloud environments. It also 
