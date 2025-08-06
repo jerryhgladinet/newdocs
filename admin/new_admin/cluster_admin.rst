@@ -11,18 +11,21 @@ Introduction
 
 To access cluster administration features, sign in to the web portal as the cluster administrator.  The login URL is the DNS name or IP address of your CentreStack server.
 
-``(Screenshot placeholder: centrestack‑main‑login‑screen.png – shows the CentreStack login screen.  The page title reads **"Sign In"** and there are fields for your email/username and password with a blue **Sign In** button.)``
+.. image:: _static/centrestack-main-login-screen.png
+   :alt: shows the CentreStack login screen with a **Sign In** title and fields for your email/username and password alongside a blue **Sign In** button
 
 After login, the **Cluster Dashboard** presents a summary of your environment.  It displays counts of tenants, users and assigned licences, the remaining trial days, and icons for navigation (Cluster Dashboard, Files, Settings, etc.).
 
-``(Screenshot placeholder: cluster‑admin‑main‑interface‑after‑login‑multi‑tenancy.png – shows the **Cluster Dashboard** page after login.  The blue banner displays remaining trial days, a **Cluster Dashboard** link and the user menu.  Below, each tenant appears as a card; the first card is labelled with the tenant name and shows user count and storage usage.  At the far left is a large **New Tenant** tile with a plus icon.  Across the top bar are icons for Tenant Manager (home icon), Reports (speedometer icon) and Settings (cog icon).)``
+.. image:: _static/cluster-admin-main-interface-after-login-multi-tenancy.png
+   :alt: **Cluster Dashboard** page after login with a blue banner showing trial days and navigation.  Tenant cards display user and storage counts, and a **New Tenant** tile with a plus icon sits on the left.  Icons for Tenant Manager, Reports and Settings appear at the top
 
 Tenant Manager
 --------------
 
 From the cluster dashboard, click the **Tenant Manager** tile to view and manage all tenants.  Each tenant card displays the tenant name, the tenant administrator, the number of users and storage usage.  A **New Tenant** tile allows you to create a tenant.
 
-``(Screenshot placeholder: clicked‑new‑tenant‑from‑tenant‑manager‑screen.png – highlights the **New Tenant** tile on the **Tenant Manager** screen.  The surrounding tiles list existing tenants; the highlighted tile has a large plus symbol and the label **"New Tenant"**.)``
+.. image:: _static/clicked-new-tenant-from-tenant-manager-screen.png
+   :alt: highlights the **New Tenant** tile on the **Tenant Manager** screen.  Existing tenants are shown as cards while the highlighted tile has a large plus symbol and the label **New Tenant**
 
 Tenant cards include a context menu with options:
 
@@ -32,7 +35,8 @@ Tenant cards include a context menu with options:
 * **Edit existing default storage** – change the storage location used by the tenant.
 * **Delete Tenant** – remove the tenant.
 
-``(Screenshot placeholder: cluster‑admin‑clicked‑tenant‑card‑context‑menu.png – show a tenant card with its context menu expanded.)``
+.. image:: _static/tenant-manager-screen-right-clicked-3-bar-menu-on-a-tenant.png
+   :alt: tenant card with its context menu expanded showing management options such as Manage Tenant, Force full scan, Change password, Edit storage and Delete tenant
 
 Creating a New Tenant
 ---------------------
@@ -44,9 +48,12 @@ Click the **New Tenant** tile and choose **Add New Tenant** to start the wiza
 3. Choosing a storage location: a sub‑folder of the cluster default tenant, an existing folder, or a new location.
 4. Completing the tenant plan – specifying user licence count, storage quota and bandwidth limits.
 
-``(Screenshot placeholder: clicked‑new‑tenant‑from‑tenant‑manager‑screen‑screen2.png – shows the first page of the **Add New Tenant** wizard titled “Welcome”.  It asks for the tenant name and administrator email and provides options to start from scratch or import existing data.)``
-``(Screenshot placeholder: clicked‑new‑tenant‑from‑tenant‑manager‑screen‑screen3.png – shows the **Division of Responsibilities** page in the tenant creation wizard.  Radio buttons let you choose whether the cluster admin or tenant admin manages users, storage, team folders and other resources.)``
-``(Screenshot placeholder: cluster‑admin‑new‑tenant‑storage‑options.png – shows the **Storage Options** step of the tenant creation wizard.  It presents radio buttons for **Existing Tenant Storage**, **File Servers in LAN**, **Remote File Servers** and **Cloud Storage (S3/Azure/Wasabi)**.)``
+.. image:: _static/clicked-new-tenant-from-tenant-manager-screen-screen2.png
+   :alt: first page of the **Add New Tenant** wizard titled “Welcome” asking for tenant name and administrator email with options to start from scratch or import existing data
+.. image:: _static/clicked-new-tenant-from-tenant-manager-screen-screen3.png
+   :alt: **Division of Responsibilities** page in the tenant creation wizard with radio buttons to choose whether the cluster admin or tenant admin manages users, storage, team folders and other resources
+.. image:: _static/tenant-scope-per-tenant-teamfolder-clicked-add-teamfolder-screen1.png
+   :alt: **Storage Options** step of the tenant creation wizard showing radio buttons for Existing Tenant Storage, File Servers in LAN, Remote File Servers and Cloud Storage (S3/Azure/Wasabi)
 
 Cluster Branding
 ----------------
@@ -62,9 +69,12 @@ Under **Cluster Branding** you can customise the look and feel of the web porta
 * **Mobile Clients (Android/iOS)** – schedule branding tasks via your partner account.
 * **Export/Import** – export current branding settings or import a branding string for reuse on other clusters.
 
-``(Screenshot placeholder: cluster‑branding‑general.png – shows the **General** tab of the Cluster Branding page.  Fields include **Product Name**, **Web UI Theme**, **Default Language** and custom URL fields for Contact Us, Home Page, Terms of Use and Privacy Policy.)``
-``(Screenshot placeholder: cluster‑branding‑web‑portal.png – shows the **Web Portal** tab of Cluster Branding.  Upload slots are provided for **Application Icon**, **Tenant Logo**, **Drive Icon**, **Login Page Logo**, a **Background Image** and a **Left Side Image**.)``
-``(Screenshot placeholder: cluster‑branding‑client‑download.png – shows the **Client Download** tab of Cluster Branding.  It contains toggle buttons for each client type (Windows, Server Agent, macOS, iOS, Android) and fields to specify custom App Store and Play Store URLs.)``
+.. image:: _static/cluster-dashboard-clicked-cluster-branding.png
+   :alt: **General** tab of the Cluster Branding page with fields for Product Name, Web UI Theme, Default Language and custom URLs for Contact Us, Home Page, Terms of Use and Privacy Policy
+.. image:: _static/cluster-dashboard-clicked-cluster-branding-then-web-portal-detail-view.png
+   :alt: **Web Portal** tab of Cluster Branding showing upload slots for the Application Icon, Tenant Logo, Drive Icon, Login Page Logo, Background Image and Left Side Image
+.. image:: _static/cluster-dashboard-clicked-cluster-branding-then-client-download-detail-view.png
+   :alt: **Client Download** tab of Cluster Branding with toggle buttons for each client type (Windows, Server Agent, macOS, iOS, Android) and fields for custom App Store and Play Store URLs
 
 Reports
 -------
@@ -80,9 +90,12 @@ Cluster reports provide visibility into usage and performance.
 * **System Diagnostic Report** – runs a health check of your cluster (generates a diagnostic report).
 * **Audit Trace** – search audit logs by user email and time range.
 
-``(Screenshot placeholder: cluster‑report‑upload.png – shows the **Upload Report** page under Reports with graphs for file uploads in the last 30 days, week, day and hour.)``
-``(Screenshot placeholder: cluster‑report‑storage‑statistics.png – shows the **Storage Statistics** page under Reports.  It lists totals for files, folders and storage size and includes pie charts of file types and tables ranking tenants and users by usage.)``
-``(Screenshot placeholder: cluster‑report‑bandwidth‑usage.png – shows the **Bandwidth Usage** page with a line graph of upload/download bandwidth over time and tables listing top tenants and users by bandwidth.)``
+.. image:: _static/cluster-dashboard-clicked-reports-upload-report-view.png
+   :alt: **Upload Report** page under Reports featuring graphs for file uploads over the last 30 days, week, day and hour
+.. image:: _static/cluster-dashboard-clicked-reports-and-then-storage-statistics-view.png
+   :alt: **Storage Statistics** report listing totals for files, folders and storage size with pie charts of file types and tables ranking tenants and users by usage
+.. image:: _static/cluster-dashboard-clicked-bandwidth-usage-report.png
+   :alt: **Bandwidth Usage** page displaying a line graph of upload/download bandwidth over time and tables listing top tenants and users by bandwidth
 
 Cluster Controls
 ----------------
@@ -113,9 +126,12 @@ Within **Settings** there are multiple tabs:
 * **License String** – enter a licence key and view current licence status (user count, expiration and licensee).
 * **Anti‑Virus** – choose the antivirus engine (None or integrated engine) for scanning uploaded files.
 
-``(Screenshot placeholder: cluster‑settings‑cluster‑settings.png – shows the **Cluster Settings** tab under Settings.  It contains toggle options to hide the build number, enable CAPTCHA, allow multi‑tenancy, purge storage after deletion, retrieve avatars from third‑party services and more.)``
-``(Screenshot placeholder: cluster‑settings‑timeouts‑limits.png – shows the **Timeouts & Limits** tab under Settings.  Here you set web session timeouts, native client token lifetimes, distributed lock idle timeout, notification intervals, device limits and purge periods.)``
-``(Screenshot placeholder: cluster‑settings‑languages.png – shows the **Languages** tab under Settings with a list of available languages (e.g., Chinese, German, French, Italian, Dutch) and a radio button to choose the default cluster language.)``
+.. image:: _static/cluster-settings-screen1-cluster-settings.png
+   :alt: **Cluster Settings** tab under Settings with toggle options to hide the build number, enable CAPTCHA, allow multi‑tenancy, purge storage after deletion, retrieve avatars from third‑party services and other controls
+.. image:: _static/cluster-settings-screen3-timeouts-and-limits.png
+   :alt: **Timeouts & Limits** tab under Settings where you set web session timeouts, native client token lifetimes, distributed lock idle timeout, notification intervals, device limits and purge periods
+.. image:: _static/cluster-settings-screen4-languages.png
+   :alt: **Languages** tab under Settings showing a list of available languages such as Chinese, German, French, Italian and Dutch with a selector for the default cluster language
 
 Default Group Policy
 --------------------
@@ -131,8 +147,10 @@ The **Default Group Policy** defines baseline policies that apply to all tenan
 * **Folder & Storage** – control default storage types, enable versioning and attachments for files and folders.
 * **Client Control** – limit client types, enforce client version updates and control other client behaviours.
 
-``(Screenshot placeholder: cluster‑group‑policy‑security.png – shows the **Security** category of the Default Group Policy.  Options include notifying users when their email changes, re‑authenticating when the network changes, enabling Google sign‑in, allowing impersonation for delegated admins and forcing uploads/downloads through worker nodes.)``
-``(Screenshot placeholder: cluster‑group‑policy‑sharing.png – shows the **Sharing** category of the Default Group Policy.  Settings cover requiring login to see files shared with me, disabling external sharing of home directories, allowing internal share URLs, disabling public links and showing or hiding guest creation and user lists in sharing dialogs.)``
+.. image:: _static/cluster-policy-clicked-security-item-detail-view.png
+   :alt: **Security** category of the Default Group Policy showing options such as notifying users when their email changes, re‑authenticating on network change, enabling Google sign‑in, allowing impersonation and forcing uploads/downloads through worker nodes
+.. image:: _static/cluster-policy-clicked-sharing-detail-view.png
+   :alt: **Sharing** category of the Default Group Policy with settings to require login for shared files, disable external sharing of home directories, enable internal share URLs, disable public links and control guest creation and user lists in share dialogs
 
 These policies apply system‑wide.  Tenant administrators can override them on a per‑tenant basis, but the default group policy provides a sensible baseline for security and usability across the cluster.
 
