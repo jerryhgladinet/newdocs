@@ -13,6 +13,8 @@ You can access the tenant administration interface either by signing in as the t
 .. image:: _static/tenant-scope-per-tenant-dashboard-main-view.png
    :alt: **Tenant Dashboard** page with summary cards for Users, Storage, Licences and Bandwidth and quick links to Team Folders, Devices, Users, Reports, Settings, Branding and Client Downloads
 
+**Breadcrumb:** Tenant > Dashboard
+
 Team Folders
 ------------
 
@@ -23,16 +25,28 @@ Team folders are shared workspaces similar to network shares.  From the **Team 
 
 .. image:: _static/tenant-scope-per-tenant-team-folder-view.png
    :alt: **Team Folders** overview listing existing team folders with their names and storage paths and a blue **Add New Team Folder** (+) button
+
+**Breadcrumb:** Tenant > Team Folders
 .. image:: _static/tenant-scope-per-tenant-teamfolder-clicked-add-teamfolder-screen1.png
    :alt: **Add New Team Folder** wizard step where you choose the underlying storage from Existing Tenant Storage, File Servers in LAN, Remote File Servers or Cloud Storage (S3/Azure/Wasabi)
+
+**Breadcrumb:** Tenant > Team Folders > Add Team Folder
 .. image:: _static/tenant-scope-per-tenant-team-folder-permissions-view.png
    :alt: **Information** tab of a team folder’s settings showing the folder name, description, storage location and options to enable versioning and attachments
+
+**Breadcrumb:** Tenant > Team Folder > Permissions
 .. image:: _static/tenant-scope-per-tenant-team-folder-collaborators-view.png
    :alt: **Collaborators** tab of a team folder listing users and groups with their permission levels and an **Add Collaborator** button
+
+**Breadcrumb:** Tenant > Team Folder > Collaborators
 .. image:: _static/tenant-scope-per-tenant-team-folder-sharing-view.png
    :alt: **External Sharing** tab of a team folder with toggles to enable or disable external sharing, require login for shared items, allow public links and set expiration policies
+
+**Breadcrumb:** Tenant > Team Folder > Sharing
 .. image:: _static/tenant-scope-per-tenant-team-folder-permissions-view.png
    :alt: **Permissions** tab for a team folder with a matrix listing users and groups and their assigned permission levels (Read, Write, Full Control)
+
+**Breadcrumb:** Tenant > Team Folder > Permissions
 
 Devices
 -------
@@ -41,6 +55,8 @@ The **Devices** page lists devices connected by tenant users (desktops, mobiles 
 
 .. image:: _static/tenant-scope-per-tenant-device-view.png
    :alt: **Devices** page listing devices connected by tenant users with columns for Device Name, User, OS/Client type and Last Access, plus actions to disable, wipe or rename devices
+
+**Breadcrumb:** Tenant > Devices
 
 Users
 -----
@@ -53,10 +69,16 @@ Under **Users & Groups** you can manage users, groups and roles:
 
 .. image:: _static/tenant-scope-per-tenant-user-view.png
    :alt: **Users** tab under Users & Groups where a table lists existing users with columns for Username, Email and Role and an **Add User** (+) button to create new users or guests
+
+**Breadcrumb:** Tenant > Users & Groups
 .. image:: _static/tenant-scope-per-tenant-user-view.png
    :alt: **Groups** tab displaying groups with their names and member counts and an **Add Group** button to create new groups
+
+**Breadcrumb:** Tenant > Users & Groups
 .. image:: _static/tenant-scope-per-tenant-user-view.png
    :alt: **Roles** tab listing existing roles with their names and descriptions and a **Create Role** button to define a new role and assign permissions
+
+**Breadcrumb:** Tenant > Users & Groups
 
 .. _tenant-admin-reports:
 
@@ -78,10 +100,16 @@ Tenant administrators can run reports scoped to their tenant:
 
 .. image:: _static/tenant-scope-per-tenant-report-view.png
    :alt: tenant‑level **Storage Statistics** report summarising files, folders and storage usage with pie charts and tables ranking team folders or users by usage
+
+**Breadcrumb:** Tenant > Reports
 .. image:: _static/tenant-scope-per-tenant-report-view.png
    :alt: tenant‑level **Upload Report** with graphs depicting file uploads over the last month, week, day and hour for this tenant
+
+**Breadcrumb:** Tenant > Reports
 .. image:: _static/tenant-scope-per-tenant-report-view.png
    :alt: **Shared Objects** report listing files and folders shared by users in the tenant with details such as path, share type and expiry date
+
+**Breadcrumb:** Tenant > Reports
 
 .. _tenant-admin-settings:
 
@@ -103,20 +131,36 @@ The **Settings** section includes many sub‑pages where you configure integrati
 
 .. image:: _static/tenant-scope-per-tenant-active-directory-after-enabled-active-directory.png
    :alt: **Active Directory** settings page with fields for server address, bind account, base DN and attribute mappings and buttons to synchronise users and groups
+
+**Breadcrumb:** Tenant > Settings > Active Directory
 .. image:: _static/tenant-scope-per-tenant-settings-view.png
    :alt: **File Locking** settings page with options to enable distributed file locking, set conflict resolution rules and define lock expiration periods
+
+**Breadcrumb:** Tenant > Settings
 .. image:: _static/tenant-scope-per-tenant-settings-view.png
    :alt: **Notifications** settings page where you can enable email notifications for folder changes, sync task failures, upload/download completion and other events
+
+**Breadcrumb:** Tenant > Settings
 .. image:: _static/tenant-scope-per-tenant-settings-view.png
    :alt: **User Account & Security** page for managing tenant administrators, configuring password policies, setting session timeouts, enabling two‑factor authentication and controlling whether the cluster admin can manage your tenant
+
+**Breadcrumb:** Tenant > Settings
 .. image:: _static/tenant-scope-per-tenant-settings-view.png
    :alt: **Ransomware Protection** settings with toggles to enable detection of suspicious activity, quarantine affected files and specify exclusion patterns
+
+**Breadcrumb:** Tenant > Settings
 .. image:: _static/tenant-scope-per-tenant-settings-view.png
    :alt: **Data Leak Protection** page where you can require login for shared items, disable public links, control guest user permissions and enable watermarking on shared documents
+
+**Breadcrumb:** Tenant > Settings
 .. image:: _static/tenant-scope-per-tenant-settings-view.png
    :alt: **Folder & Storage** settings page where you can connect new storage sources, set retention policies and manage versioning
+
+**Breadcrumb:** Tenant > Settings
 .. image:: _static/tenant-scope-per-tenant-settings-view.png
    :alt: **Background Tasks & Filters** page listing background tasks and allowing you to configure file type filters
+
+**Breadcrumb:** Tenant > Settings
 
 Branding
 --------
@@ -126,6 +170,8 @@ The **Branding** page allows tenant administrators to customise the look and fee
 .. image:: _static/tenant-scope-per-tenant-branding-view.png
    :alt: **Tenant Branding** settings page with options to upload a custom tenant logo, select a colour theme and specify a login page background image distinct from the cluster branding
 
+**Breadcrumb:** Tenant > Branding
+
 Client Downloads
 ----------------
 
@@ -133,6 +179,8 @@ The **Client Downloads** page lists the client software available for your tena
 
 .. image:: _static/tenant-scope-per-tenant-client-download-view.png
    :alt: **Client Downloads** page showing download options for Windows desktop client, Server Agent, macOS client and mobile apps, with guidance on which installers to use
+
+**Breadcrumb:** Tenant > Client Downloads
 
 .. _tenant-admin-summary:
 
