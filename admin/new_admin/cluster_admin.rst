@@ -63,6 +63,69 @@ The **Cluster Admins** link on the dashboard opens a page where you can view an
 .. image:: _static/cluster-dashboard-clicked-cluster-admin.png
    :alt: Cluster Admins page listing existing administrators with options to add or remove admins
 
+Default Group Policy
+--------------------
+
+The **Default Group Policy** defines baseline policies that apply to all tenants unless overridden by a tenant administrator.  Categories include:
+
+* **Security** – options like notifying users when their email changes, re‑authenticating when the network changes, enabling Google sign‑in, impersonation for delegated admins and requiring file uploads through worker nodes.
+* **Sharing** – require login to see files shared with me, disable external sharing of home directories, control internal share URLs, disable public links and show guest creation options and user lists in sharing dialogs.
+* **File Locking & Collision** – settings for distributed locking, conflict resolution and file versioning.
+* **Client Settings Manager** – manage client‑side features such as sync status indicators, startup behaviour and offline access.
+* **Retention Policy & Ransomware Protection** – configure file retention periods and enable ransomware detection and quarantine.
+* **Accounts & Login** – password policies, two‑factor authentication and SSO settings.
+* **Folder & Storage** – control default storage types, enable versioning and attachments for files and folders.
+* **Client Control** – limit client types, enforce client version updates and control other client behaviours.
+
+.. image:: _static/cluster-policy-clicked-security-item-detail-view.png
+   :alt: **Security** category of the Default Group Policy showing options such as notifying users when their email changes, re‑authenticating on network change, enabling Google sign‑in, allowing impersonation and forcing uploads/downloads through worker nodes
+.. image:: _static/cluster-policy-clicked-sharing-detail-view.png
+   :alt: **Sharing** category of the Default Group Policy with settings to require login for shared files, disable external sharing of home directories, enable internal share URLs, disable public links and control guest creation and user lists in share dialogs
+
+These policies apply system‑wide.  Tenant administrators can override them on a per‑tenant basis, but the default group policy provides a sensible baseline for security and usability across the cluster.
+
+Cluster Branding
+----------------
+
+Under **Cluster Branding** you can customise the look and feel of the web portal and clients.
+
+* **General** – set product name, choose a web UI theme, default language and custom URLs (home page, support, terms of use, privacy).
+* **Web Portal** – upload logos (application icon, tenant logo, drive icon, login page logo), background images and choose colour themes.
+* **Client Download** – control which client downloads appear on the login page; provide custom iOS/Android app URLs.
+* **Windows Client** – configure application icon, drive icon, manufacturer name and contact info for the Windows client.
+* **Mac Client** – configure icons for the macOS client (this may require an external branding task via partner account).
+* **Emails** – customise email templates for user invitations, shared file notifications and system alerts.
+* **Mobile Clients (Android/iOS)** – schedule branding tasks via your partner account.
+* **Export/Import** – export current branding settings or import a branding string for reuse on other clusters.
+
+.. image:: _static/cluster-dashboard-clicked-cluster-branding.png
+   :alt: **General** tab of the Cluster Branding page with fields for Product Name, Web UI Theme, Default Language and custom URLs for Contact Us, Home Page, Terms of Use and Privacy Policy
+.. image:: _static/cluster-dashboard-clicked-cluster-branding-then-web-portal-detail-view.png
+   :alt: **Web Portal** tab of Cluster Branding showing upload slots for the Application Icon, Tenant Logo, Drive Icon, Login Page Logo, Background Image and Left Side Image
+.. image:: _static/cluster-dashboard-clicked-cluster-branding-then-client-download-detail-view.png
+   :alt: **Client Download** tab of Cluster Branding with toggle buttons for each client type (Windows, Server Agent, macOS, iOS, Android) and fields for custom App Store and Play Store URLs
+
+Cluster Settings
+----------------
+
+Within **Cluster Settings** there are multiple tabs:
+
+* **Cluster Settings** – toggles for login page features (hide build number, enable CAPTCHA, enable multi‑tenancy), purge policies, user avatars, file extension hiding, auto‑logon and other UI controls.
+* **Performance & Throttling** – configure preview size limits and bandwidth limits per worker node.
+* **Timeouts and Limits** – define session timeouts, token expiration, lock idle timeout, notification intervals, device limits and purge periods.
+* **Languages** – enable or disable specific language packs and set the cluster default language.
+* **Branding** – hide tutorial videos or enable tenant‑level branding.
+* **Change Log** – set how many days to retain file change logs and specify email/database details for logging.
+* **License String** – enter a licence key and view current licence status (user count, expiration and licensee).
+* **Anti‑Virus** – choose the antivirus engine (None or integrated engine) for scanning uploaded files.
+
+.. image:: _static/cluster-settings-screen1-cluster-settings.png
+   :alt: **Cluster Settings** tab under Settings with toggle options to hide the build number, enable CAPTCHA, allow multi‑tenancy, purge storage after deletion, retrieve avatars from third‑party services and other controls
+.. image:: _static/cluster-settings-screen3-timeouts-and-limits.png
+   :alt: **Timeouts & Limits** tab under Settings where you set web session timeouts, native client token lifetimes, distributed lock idle timeout, notification intervals, device limits and purge periods
+.. image:: _static/cluster-settings-screen4-languages.png
+   :alt: **Languages** tab under Settings showing a list of available languages such as Chinese, German, French, Italian and Dutch with a selector for the default cluster language
+
 Application Manager
 -------------------
 
@@ -86,6 +149,27 @@ Use the **Anti‑Virus** page to choose an antivirus engine for scanning files u
 
 .. image:: _static/cluster-dashboard-clicked-anti-virus-view.png
    :alt: Anti‑Virus settings page allowing administrators to select or disable the built‑in antivirus engine for file scanning
+
+Reports
+-------
+
+Cluster reports provide visibility into usage and performance.
+
+* **Upload Report** – graphs file uploads over the last 30 days, week, day and hour.
+* **Storage Statistics** – summarises file counts and sizes, and lists top tenants and users by storage.
+* **Active Users** – lists currently active sessions.
+* **Guest Users** – lists active guest sessions.
+* **Node Performance** – displays database statistics and per‑worker‑node performance metrics.
+* **Bandwidth Usage** – graphs upload/download bandwidth and lists top tenants/users.
+* **System Diagnostic Report** – runs a health check of your cluster (generates a diagnostic report).
+* **Audit Trace** – search audit logs by user email and time range.
+
+.. image:: _static/cluster-dashboard-clicked-reports-upload-report-view.png
+   :alt: **Upload Report** page under Reports featuring graphs for file uploads over the last 30 days, week, day and hour
+.. image:: _static/cluster-dashboard-clicked-reports-and-then-storage-statistics-view.png
+   :alt: **Storage Statistics** report listing totals for files, folders and storage size with pie charts of file types and tables ranking tenants and users by usage
+.. image:: _static/cluster-dashboard-clicked-bandwidth-usage-report.png
+   :alt: **Bandwidth Usage** page displaying a line graph of upload/download bandwidth over time and tables listing top tenants and users by bandwidth
 
 Multi‑Tenancy Toggle
 --------------------
@@ -115,105 +199,6 @@ The **Client Version Manager** allows cluster administrators to publish and ma
 
 .. image:: _static/cluster-dashboard-clicked-windows-client-to-get-to-client-version-manager.png
    :alt: Client Version Manager displaying the Windows client tab with fields for version number, package path, daily upgrade limit and user lists, plus a publish link to push updates
-
-Cluster Branding
-----------------
-
-Under **Cluster Branding** you can customise the look and feel of the web portal and clients.
-
-* **General** – set product name, choose a web UI theme, default language and custom URLs (home page, support, terms of use, privacy).
-* **Web Portal** – upload logos (application icon, tenant logo, drive icon, login page logo), background images and choose colour themes.
-* **Client Download** – control which client downloads appear on the login page; provide custom iOS/Android app URLs.
-* **Windows Client** – configure application icon, drive icon, manufacturer name and contact info for the Windows client.
-* **Mac Client** – configure icons for the macOS client (this may require an external branding task via partner account).
-* **Emails** – customise email templates for user invitations, shared file notifications and system alerts.
-* **Mobile Clients (Android/iOS)** – schedule branding tasks via your partner account.
-* **Export/Import** – export current branding settings or import a branding string for reuse on other clusters.
-
-.. image:: _static/cluster-dashboard-clicked-cluster-branding.png
-   :alt: **General** tab of the Cluster Branding page with fields for Product Name, Web UI Theme, Default Language and custom URLs for Contact Us, Home Page, Terms of Use and Privacy Policy
-.. image:: _static/cluster-dashboard-clicked-cluster-branding-then-web-portal-detail-view.png
-   :alt: **Web Portal** tab of Cluster Branding showing upload slots for the Application Icon, Tenant Logo, Drive Icon, Login Page Logo, Background Image and Left Side Image
-.. image:: _static/cluster-dashboard-clicked-cluster-branding-then-client-download-detail-view.png
-   :alt: **Client Download** tab of Cluster Branding with toggle buttons for each client type (Windows, Server Agent, macOS, iOS, Android) and fields for custom App Store and Play Store URLs
-
-Reports
--------
-
-Cluster reports provide visibility into usage and performance.
-
-* **Upload Report** – graphs file uploads over the last 30 days, week, day and hour.
-* **Storage Statistics** – summarises file counts and sizes, and lists top tenants and users by storage.
-* **Active Users** – lists currently active sessions.
-* **Guest Users** – lists active guest sessions.
-* **Node Performance** – displays database statistics and per‑worker‑node performance metrics.
-* **Bandwidth Usage** – graphs upload/download bandwidth and lists top tenants/users.
-* **System Diagnostic Report** – runs a health check of your cluster (generates a diagnostic report).
-* **Audit Trace** – search audit logs by user email and time range.
-
-.. image:: _static/cluster-dashboard-clicked-reports-upload-report-view.png
-   :alt: **Upload Report** page under Reports featuring graphs for file uploads over the last 30 days, week, day and hour
-.. image:: _static/cluster-dashboard-clicked-reports-and-then-storage-statistics-view.png
-   :alt: **Storage Statistics** report listing totals for files, folders and storage size with pie charts of file types and tables ranking tenants and users by usage
-.. image:: _static/cluster-dashboard-clicked-bandwidth-usage-report.png
-   :alt: **Bandwidth Usage** page displaying a line graph of upload/download bandwidth over time and tables listing top tenants and users by bandwidth
-
-Cluster Controls
-----------------
-
-These controls manage cluster‑wide services and resources.
-
-* **Cluster Admin** – add or remove additional cluster administrators and reset passwords.
-* **Email Service** – configure SMTP settings for outbound email (host, port, credentials, encryption).
-* **Application Manager** – integrate Microsoft Office Online Server or Zoho for online editing; provide the server address or API key and set the default viewer mode.
-* **Client Version Manager** – manage the Windows client, Server Agent and macOS client versions available for download; upload new versions and set the default.
-* **Settings** – contains several sub‑tabs described below.
-* **Anti‑Virus** – select an antivirus engine for file scanning (set to **None** if scanning is not required).
-* **Worker Nodes** – view and manage worker nodes; add or remove servers from the cluster.
-* **Web Node** – manage web nodes that handle portal traffic.
-* **Zones** – define geographic zones for multi‑region deployments and assign nodes to zones.
-
-Cluster Settings
-^^^^^^^^^^^^^^^^
-
-Within **Settings** there are multiple tabs:
-
-* **Cluster Settings** – toggles for login page features (hide build number, enable CAPTCHA, enable multi‑tenancy), purge policies, user avatars, file extension hiding, auto‑logon and other UI controls.
-* **Performance & Throttling** – configure preview size limits and bandwidth limits per worker node.
-* **Timeouts and Limits** – define session timeouts, token expiration, lock idle timeout, notification intervals, device limits and purge periods.
-* **Languages** – enable or disable specific language packs and set the cluster default language.
-* **Branding** – hide tutorial videos or enable tenant‑level branding.
-* **Change Log** – set how many days to retain file change logs and specify email/database details for logging.
-* **License String** – enter a licence key and view current licence status (user count, expiration and licensee).
-* **Anti‑Virus** – choose the antivirus engine (None or integrated engine) for scanning uploaded files.
-
-.. image:: _static/cluster-settings-screen1-cluster-settings.png
-   :alt: **Cluster Settings** tab under Settings with toggle options to hide the build number, enable CAPTCHA, allow multi‑tenancy, purge storage after deletion, retrieve avatars from third‑party services and other controls
-.. image:: _static/cluster-settings-screen3-timeouts-and-limits.png
-   :alt: **Timeouts & Limits** tab under Settings where you set web session timeouts, native client token lifetimes, distributed lock idle timeout, notification intervals, device limits and purge periods
-.. image:: _static/cluster-settings-screen4-languages.png
-   :alt: **Languages** tab under Settings showing a list of available languages such as Chinese, German, French, Italian and Dutch with a selector for the default cluster language
-
-Default Group Policy
---------------------
-
-The **Default Group Policy** defines baseline policies that apply to all tenants unless overridden by a tenant administrator.  Categories include:
-
-* **Security** – options like notifying users when their email changes, re‑authenticating when the network changes, enabling Google sign‑in, impersonation for delegated admins and requiring file uploads through worker nodes.
-* **Sharing** – require login to see files shared with me, disable external sharing of home directories, control internal share URLs, disable public links and show guest creation options and user lists in sharing dialogs.
-* **File Locking & Collision** – settings for distributed locking, conflict resolution and file versioning.
-* **Client Settings Manager** – manage client‑side features such as sync status indicators, startup behaviour and offline access.
-* **Retention Policy & Ransomware Protection** – configure file retention periods and enable ransomware detection and quarantine.
-* **Accounts & Login** – password policies, two‑factor authentication and SSO settings.
-* **Folder & Storage** – control default storage types, enable versioning and attachments for files and folders.
-* **Client Control** – limit client types, enforce client version updates and control other client behaviours.
-
-.. image:: _static/cluster-policy-clicked-security-item-detail-view.png
-   :alt: **Security** category of the Default Group Policy showing options such as notifying users when their email changes, re‑authenticating on network change, enabling Google sign‑in, allowing impersonation and forcing uploads/downloads through worker nodes
-.. image:: _static/cluster-policy-clicked-sharing-detail-view.png
-   :alt: **Sharing** category of the Default Group Policy with settings to require login for shared files, disable external sharing of home directories, enable internal share URLs, disable public links and control guest creation and user lists in share dialogs
-
-These policies apply system‑wide.  Tenant administrators can override them on a per‑tenant basis, but the default group policy provides a sensible baseline for security and usability across the cluster.
 
 Summary
 -------
