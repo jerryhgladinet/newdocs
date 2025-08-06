@@ -58,8 +58,10 @@ Under **Users & Groups** you can manage users, groups and roles:
 .. image:: _static/tenant-scope-per-tenant-user-view.png
    :alt: **Roles** tab listing existing roles with their names and descriptions and a **Create Role** button to define a new role and assign permissions
 
-Reports
--------
+.. _tenant-admin-reports:
+
+Tenant Reports
+--------------
 
 Tenant administrators can run reports scoped to their tenant:
 
@@ -81,8 +83,10 @@ Tenant administrators can run reports scoped to their tenant:
 .. image:: _static/tenant-scope-per-tenant-report-view.png
    :alt: **Shared Objects** report listing files and folders shared by users in the tenant with details such as path, share type and expiry date
 
-Settings
---------
+.. _tenant-admin-settings:
+
+Tenant Settings
+--------------
 
 The **Settings** section includes many sub‑pages where you configure integrations, policies and client behaviours:
 
@@ -129,6 +133,8 @@ The **Client Downloads** page lists the client software available for your tena
 
 .. image:: _static/tenant-scope-per-tenant-client-download-view.png
    :alt: **Client Downloads** page showing download options for Windows desktop client, Server Agent, macOS client and mobile apps, with guidance on which installers to use
+
+.. _tenant-admin-summary:
 
 Tenant Administration Summary
 ----------------------------
