@@ -11,9 +11,17 @@ extensions = [
 # Paths that contain templates, relative to this directory.
 templates_path = ['_templates']
 
-# List of patterns, relative to source directory, that match files
-# and directories to ignore when looking for source files.
-exclude_patterns = []
+# List of patterns, relative to this directory, that match files and directories to ignore when looking for source files.
+# Exclude legacy or deprecated RST files that are not part of the current documentation structure.
+exclude_patterns = [
+    'branding.rst',
+    'client_downloads.rst',
+    'cluster_settings.rst',
+    'group_policy.rst',
+    'reports.rst',
+    'settings.rst',
+    'tenant_management.rst',
+]
 
 # The master toctree document.
 root_doc = 'index'
@@ -23,7 +31,6 @@ html_theme = 'sphinx_rtd_theme'
 
 # Paths that contain custom static files, such as style sheets.
 html_static_path = ['_static']
-
 
 # Version information for the project
 version = '16.6'

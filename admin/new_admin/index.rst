@@ -25,15 +25,3 @@ CentreStack Admin Guide
    :caption: Appendix
 
    troubleshooting
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Additional Topics
-
-   branding
-   client_downloads
-   cluster_settings
-   group_policy
-   reports
-   settings
-   tenant_management
