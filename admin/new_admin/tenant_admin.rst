@@ -3,21 +3,15 @@ Tenant Administration
 
 This section describes administration tasks performed at the tenant level.  A tenant typically represents an organisation or department.  Tenant administrators have full control over their own users, storage and policies but cannot affect other tenants.
 
-Introduction
-------------
+.. _tenant-admin-dashboard:
 
-You can access the tenant administration interface either by signing in as the tenant administrator or by clicking **Manage Tenant** from the cluster administrator’s Tenant Manager.  The tenant dashboard summarises usage and provides links to different sections.
+Dashboard
+---------
+
+You can access the tenant administration interface either by signing in as the tenant administrator or by clicking **Manage Tenant** from the cluster administrator’s Tenant Manager.  The tenant dashboard summarises usage and provides quick links to Team Folders, Devices, Users, Reports and Settings.
 
 .. image:: _static/tenant-scope-per-tenant-dashboard-main-view.png
-   :alt: **Tenant Dashboard** page with summary cards for Users, Storage, Licences and Bandwidth and quick links to Team Folders, Users, Groups, Reports and Settings
-
-Tenant Plan
------------
-
-Under **Tenant Plan** you can view and adjust the user licence count, storage quota and bandwidth limits assigned to this tenant.
-
-.. image:: _static/tenant-admin-main-interface.png
-   :alt: **Tenant Plan** page where sliders allow you to adjust user licences, storage quota and bandwidth allocation for the tenant with current values displayed
+   :alt: **Tenant Dashboard** page with summary cards for Users, Storage, Licences and Bandwidth and quick links to Team Folders, Devices, Users, Reports, Settings, Branding and Client Downloads
 
 Team Folders
 ------------
@@ -34,22 +28,22 @@ Team folders are shared workspaces similar to network shares.  From the **Team 
 .. image:: _static/tenant-scope-per-tenant-team-folder-permissions-view.png
    :alt: **Information** tab of a team folder’s settings showing the folder name, description, storage location and options to enable versioning and attachments
 .. image:: _static/tenant-scope-per-tenant-team-folder-collaborators-view.png
-   :alt: **Collaborators** tab of a team folder listing users and groups with their permission levels and an **Add Collaborator** button
+   :alt: **Collaborators** tab of a team folder listing users and groups with their permission levels and an **Add Collaborator** button
 .. image:: _static/tenant-scope-per-tenant-team-folder-sharing-view.png
    :alt: **External Sharing** tab of a team folder with toggles to enable or disable external sharing, require login for shared items, allow public links and set expiration policies
 .. image:: _static/tenant-scope-per-tenant-team-folder-permissions-view.png
-   :alt: **Permissions** tab for a team folder with a matrix listing users and groups and their assigned permission levels (Read, Write, Full Control)
+   :alt: **Permissions** tab for a team folder with a matrix listing users and groups and their assigned permission levels (Read, Write, Full Control)
 
-Device Manager
---------------
+Devices
+-------
 
-The **Device Manager** lists devices connected by tenant users (desktops, mobiles and other clients).  You can disable, wipe or rename devices from this page.
+The **Devices** page lists devices connected by tenant users (desktops, mobiles and other clients).  You can disable, wipe or rename devices from this page.
 
 .. image:: _static/tenant-scope-per-tenant-device-view.png
-   :alt: **Device Manager** page listing devices connected by tenant users with columns for Device Name, User, OS/Client type and Last Access, plus actions to disable, wipe or rename devices
+   :alt: **Devices** page listing devices connected by tenant users with columns for Device Name, User, OS/Client type and Last Access, plus actions to disable, wipe or rename devices
 
-User Management
----------------
+Users
+-----
 
 Under **Users & Groups** you can manage users, groups and roles:
 
@@ -58,11 +52,11 @@ Under **Users & Groups** you can manage users, groups and roles:
 * **Roles** – define custom roles with specific rights and assign them to users.
 
 .. image:: _static/tenant-scope-per-tenant-user-view.png
-   :alt: **Users** tab under Users & Groups where a table lists existing users with columns for Username, Email and Role and an **Add User** (+) button to create new users or guests
+   :alt: **Users** tab under Users & Groups where a table lists existing users with columns for Username, Email and Role and an **Add User** (+) button to create new users or guests
 .. image:: _static/tenant-scope-per-tenant-user-view.png
-   :alt: **Groups** tab displaying groups with their names and member counts and an **Add Group** button to create new groups
+   :alt: **Groups** tab displaying groups with their names and member counts and an **Add Group** button to create new groups
 .. image:: _static/tenant-scope-per-tenant-user-view.png
-   :alt: **Roles** tab listing existing roles with their names and descriptions and a **Create Role** button to define a new role and assign permissions
+   :alt: **Roles** tab listing existing roles with their names and descriptions and a **Create Role** button to define a new role and assign permissions
 
 Reports
 -------
@@ -93,7 +87,7 @@ Settings
 The **Settings** section includes many sub‑pages where you configure integrations, policies and client behaviours:
 
 * **Active Directory** – integrate with local or external Active Directory; configure AD server settings, user provisioning and attribute mapping.
-* **Single Sign‑On (SAML Integration)** – configure SAML SSO with your identity provider by supplying IdP metadata and certificates.
+* **Single Sign‑On (SAML Integration)** – configure SAML SSO with your identity provider by supplying IdP metadata and certificates.
 * **File Locking** – enable distributed file locking and set conflict resolution policies.
 * **Notifications** – configure email notifications for events such as folder changes, sync task failures and upload/download completion.
 * **User Account & Security** – manage tenant administrators, user accounts, password policies, access controls, security settings (e.g., allow cluster admin to manage my tenant) and the default home directory.
@@ -101,8 +95,7 @@ The **Settings** section includes many sub‑pages where you configure integrati
 * **Data Leak Protection** – set sharing policies (require login for shared items, disable public links), configure guest user restrictions and enable watermarking.
 * **Clients & Applications** – configure client settings (UI features, offline access), web portal settings and native client settings.
 * **Folder & Storage** – manage backend storage (connect to file servers, remote file servers or cloud storage), configure retention policies and attach additional storage.
-* **Tenant Branding** – customise tenant‑level branding separate from cluster branding (logo, colours, login page image).
-* **Background Tasks & Filters** – view background tasks (e.g., indexing) and configure file type filters.
+* **Background Tasks & Filters** – view background tasks (e.g., indexing) and configure file type filters.
 
 .. image:: _static/tenant-scope-per-tenant-active-directory-after-enabled-active-directory.png
    :alt: **Active Directory** settings page with fields for server address, bind account, base DN and attribute mappings and buttons to synchronise users and groups
@@ -116,14 +109,28 @@ The **Settings** section includes many sub‑pages where you configure integrati
    :alt: **Ransomware Protection** settings with toggles to enable detection of suspicious activity, quarantine affected files and specify exclusion patterns
 .. image:: _static/tenant-scope-per-tenant-settings-view.png
    :alt: **Data Leak Protection** page where you can require login for shared items, disable public links, control guest user permissions and enable watermarking on shared documents
-.. image:: _static/tenant-scope-per-tenant-client-download-view.png
-   :alt: **Clients & Applications** settings page with controls to enable or disable client features such as map network drive and sync indicator, set offline access parameters and configure web portal options
 .. image:: _static/tenant-scope-per-tenant-settings-view.png
    :alt: **Folder & Storage** settings page where you can connect new storage sources, set retention policies and manage versioning
+.. image:: _static/tenant-scope-per-tenant-settings-view.png
+   :alt: **Background Tasks & Filters** page listing background tasks and allowing you to configure file type filters
+
+Branding
+--------
+
+The **Branding** page allows tenant administrators to customise the look and feel of their tenant portal independent of the cluster branding.  You can upload a custom tenant logo, choose a colour theme and set a background image for the login page.
+
 .. image:: _static/tenant-scope-per-tenant-branding-view.png
-   :alt: **Tenant Branding** settings page with options to upload a custom tenant logo, choose a colour theme and specify a login page background image distinct from the cluster branding
+   :alt: **Tenant Branding** settings page with options to upload a custom tenant logo, select a colour theme and specify a login page background image distinct from the cluster branding
 
-Summary
--------
+Client Downloads
+---------------
 
-Tenant administration focuses on managing a single organisation’s users, storage and policies.  Tenant administrators have many of the same capabilities as cluster administrators, but only within their own tenant.  They can create and manage team folders, integrate with Active Directory and SAML SSO, enforce security and data protection policies, and monitor usage through detailed reports.
+The **Client Downloads** page lists the client software available for your tenant.  It provides download links for the latest Windows client, Server Agent and macOS client, along with links to the iOS App Store and Google Play for mobile apps.  Use this page to ensure your users are running the most recent client versions.
+
+.. image:: _static/tenant-scope-per-tenant-client-download-view.png
+   :alt: **Client Downloads** page showing download options for Windows desktop client, Server Agent, macOS client and mobile apps, with guidance on which installers to use
+
+Tenant Administration Summary
+----------------------------
+
+Tenant administration focuses on managing a single organisation’s users, storage and policies.  Tenant administrators have many of the same capabilities as cluster administrators, but only within their own tenant.  They can create and manage team folders, integrate with Active Directory and SAML SSO, enforce security and data protection policies, customise their branding and client download options, and monitor usage through detailed reports.
