@@ -86,7 +86,7 @@ Tenant administrators can run reports scoped to their tenant:
 .. _tenant-admin-settings:
 
 Tenant Settings
---------------
+---------------
 
 The **Settings** section includes many sub‑pages where you configure integrations, policies and client behaviours:
 
@@ -127,7 +127,7 @@ The **Branding** page allows tenant administrators to customise the look and fee
    :alt: **Tenant Branding** settings page with options to upload a custom tenant logo, select a colour theme and specify a login page background image distinct from the cluster branding
 
 Client Downloads
----------------
+----------------
 
 The **Client Downloads** page lists the client software available for your tenant.  It provides download links for the latest Windows client, Server Agent and macOS client, along with links to the iOS App Store and Google Play for mobile apps.  Use this page to ensure your users are running the most recent client versions.
 
@@ -137,6 +137,6 @@ The **Client Downloads** page lists the client software available for your tena
 .. _tenant-admin-summary:
 
 Tenant Administration Summary
-----------------------------
+-----------------------------
 
 Tenant administration focuses on managing a single organisation’s users, storage and policies.  Tenant administrators have many of the same capabilities as cluster administrators, but only within their own tenant.  They can create and manage team folders, integrate with Active Directory and SAML SSO, enforce security and data protection policies, customise their branding and client download options, and monitor usage through detailed reports.
