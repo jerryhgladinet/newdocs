@@ -126,12 +126,28 @@ The **Common Settings** group contains policies that apply to everyone.  These 
 .. image:: _static/cluster-policy-clicked-security-item-detail-view.png
    :alt: Security settings page with toggles for email‑change notifications, re‑authentication on network change, Google sign‑in, impersonation and enforcing uploads/downloads through worker nodes
 
+The **Security** page contains a handful of toggles that govern how users authenticate and how their sessions are protected.  Each option corresponds to a specific need an administrator might have.  For example:
+
+* **Notify user when email is changed** – Notifies the original email address whenever the account email is changed, so that the user can detect unauthorised modifications and respond quickly.
+* **Force client re‑authenticate when network changes** – Requires users to re‑login when their IP/network changes to reduce the risk of session hijacking when someone steals a session cookie and moves to a different network.
+* **Enable authenticating user with Google Apps credentials** – Allows users to sign in using their Google credentials for convenience and centralised identity management without requiring a separate password.
+* **Delegate admin impersonates tenant admin via server agent** – When a delegated admin logs in via the Server Agent, automatically impersonates the tenant admin so they have the correct permissions to manage tenant resources.
+* **File upload and download go through worker node** – Forces all transfers to pass through the worker node for scanning, auditing and bandwidth control rather than direct peer‑to‑peer transfers.
+
 **Sharing** – govern public links and guest users.  Require recipients to log in, disable external sharing of home directories, enable internal share URLs, disable public links and show or hide guest creation options.
 
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Sharing``
 
 .. image:: _static/cluster-policy-clicked-sharing-detailed-view-part1.png
    :alt: Sharing settings page with options to require login for shared files, disable external sharing of home directories, enable internal share URLs, disable public links and manage guest user options
+
+The **Sharing** settings govern how users share files and folders with others.  They help administrators balance collaboration with security.  Key options include:
+
+* **Require login for shared files** – Recipients must sign in to view shared items, ensuring that access is tracked and controlled.
+* **Disable external sharing of home directories** – Prevents users from sharing their personal home folders externally to avoid inadvertent data exposure.
+* **Enable internal share URLs** – Allows the system to create share links that only work for authenticated internal users, facilitating collaboration within the organisation.
+* **Disable public links** – Blocks creation of anonymous public links to ensure that all shares are authenticated.
+* **Show or hide guest user options** – Determines whether share dialogs include options to invite guests, letting administrators restrict guest account creation.
 
 **File Locking** – configure distributed locking rules.  Enable check‑in/check‑out, define automatic unlock time‑outs and allow forced unlocks.  The detailed view may span multiple screens.
 
@@ -145,6 +161,14 @@ The **Common Settings** group contains policies that apply to everyone.  These 
 .. image:: _static/cluster-policy-clicked-file-locking-detailed-view-part2.png
    :alt: File Locking settings (part 2) continuing the options for lock time‑outs and user permissions
 
+Use the **File Locking** pages to prevent conflicts when multiple users access the same file.  The controls allow you to:
+
+* **Enable distributed file locking rules** – Turns on file locking across clients so that only one user can edit a file at a time.
+* **Require check‑in/check‑out on all files** – Enforces a formal check‑in/check‑out workflow to prevent concurrent edits.
+* **Lock expiration (minutes)** – Automatically releases locks after a specified number of minutes if the user forgets to unlock.
+* **Max simultaneous locks** – Limits how many locks can be held at once to prevent a single user from monopolising files.
+* **Allow forced unlocks** – Allows administrators or users with permission to override and release a lock when necessary.
+
 **Client Settings Manager** – manage how native clients behave.  You can control bandwidth limits, large file upload chunking, mapped drive settings, Outlook plugin behaviour, scheduled sync windows and throttle rules.
 
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Client Settings Manager`` > ``Bandwidth Control``
@@ -152,10 +176,21 @@ The **Common Settings** group contains policies that apply to everyone.  These 
 .. image:: _static/cluster-policy-clicked-client-settings-manager-bandwidth-control-detail-view.png
    :alt: Bandwidth control settings for the client, including download/upload limits and number of file transfer threads
 
+**Bandwidth Control** governs how much network capacity the client may use:
+
+* **Download/upload limit (KB/s)** – Caps the bandwidth used by the client for downloads and uploads, preventing it from saturating the user's internet connection.
+* **Number of threads** – Sets how many parallel transfers the client can perform, balancing speed with resource usage.
+
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Client Settings Manager`` > ``Large File Upload``
 
 .. image:: _static/cluster-policy-clicked-client-settings-manager-large-file-upload-detail-view.png
    :alt: Large File Upload settings allowing you to enable chunked uploads for files over a certain size, specify chunk size and enable volume shadow copy for open files
+
+**Large File Upload** options improve reliability when uploading big files:
+
+* **Enable chunked uploads** – Breaks large files into smaller chunks for reliable transfers and resumable uploads.
+* **Chunk size** – Defines the size of each upload chunk.
+* **Use Volume Shadow Copy** – Allows uploading files that are in use by temporarily copying them.
 
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Client Settings Manager`` > ``Mapped Drive Control (Part 1)``
 
@@ -167,25 +202,74 @@ The **Common Settings** group contains policies that apply to everyone.  These 
 .. image:: _static/cluster-policy-clicked-client-settings-manager-mapped-drive-control-detail-view-2.png
    :alt: Mapped Drive Control settings (part 2) covering drive letter assignment, cache size limits, purge schedules, offline mode, encryption of local cache, sync of folder metadata and other advanced options
 
+**Mapped Drive Control** contains a long list of switches to customise how the native drive behaves on client machines:
+
+* **Hide download tracker** – Hides the download status window for a cleaner user experience.
+* **Disable folder move confirmation** – Removes prompts when users move folders within the mapped drive.
+* **Allow file preview** – Lets users preview files directly from the cloud drive.
+* **Hide storage quota** – Conceals quota information to simplify the interface.
+* **Disable renaming root folders** – Prevents users from renaming top‑level directories.
+* **Allow creating shortcuts** – Permits users to create shortcuts within the mapped drive.
+* **Auto launch on login** – Automatically mounts the drive when the user logs in.
+* **Suppress change notifications** – Hides notifications when files are added or modified.
+* **Allow in‑place ZIP/EXE execution** – Enables opening archives and executables directly from the cloud drive.
+* **Use Windows credentials** – Uses the Windows login credentials to authenticate to the drive for single sign‑on.
+* **Maximum ZIP and thumbnail sizes** – Specifies the largest archive and image sizes for which previews are generated.
+* **Drive letter** – Sets the letter assigned to the mapped drive.
+* **Cache size limit** – Limits the amount of local disk space used for cached files.
+* **Minimum free disk space** – Ensures that a certain amount of free space is left on the user's machine.
+* **Purge logging DB after N days** – Automatically cleans the local database after a number of days.
+* **Mount drive globally** – Makes the drive available to all users on the machine rather than per‑user.
+* **Offline mode shows cached files only** – When offline, only displays files already cached locally.
+* **Disable check out** – Prevents users from checking out files for editing.
+* **Use default browser** – Forces links to open in the system default browser rather than the internal browser.
+* **Encrypt local cache** – Encrypts cached files on disk for security.
+* **Always sync folder metadata** – Ensures that folder names and structures are kept up to date even when content is not downloaded.
+* **Disable AutoCAD optimisation** – Turns off special handling for AutoCAD files if not needed.
+
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Client Settings Manager`` > ``Outlook Plugin``
 
 .. image:: _static/cluster-policy-clicked-client-settings-manager-outlook-plugin-detail-view.png
    :alt: Outlook Plugin configuration showing a file size threshold for converting attachments to links, a default folder for storing attachments and a link expiration setting
+
+**Outlook Plugin** settings determine how email attachments are off‑loaded to the cloud:
+
+* **File size threshold (KB)** – Above this size, attachments are converted to links to save email bandwidth and storage.
+* **Default attachments folder** – Sets where attachments are stored in the cloud when off‑loaded from Outlook.
+* **Link expiration (days)** – Determines how long the generated attachment links remain valid before expiring.
 
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Client Settings Manager`` > ``Schedule Sync``
 
 .. image:: _static/cluster-policy-clicked-client-settings-manager-schedule-sync-detail-view.png
    :alt: Schedule Sync settings with a toggle to enable scheduled sync and fields to define start and end hours for paused sync windows
 
+**Schedule Sync** lets administrators control when synchronisation occurs:
+
+* **Enable scheduled sync** – Allows administrators to limit syncing to certain hours of the day.
+* **Pause sync start hour** – Start time for the daily sync pause, during which no synchronisation occurs.
+* **Pause sync end hour** – End time when synchronisation resumes.
+
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Client Settings Manager`` > ``Sync Throttle``
 
 .. image:: _static/cluster-policy-clicked-client-settings-manager-sync-throttle-detail-view.png
    :alt: Sync Throttle settings allowing you to enable throttled uploads/downloads and specify the bandwidth limits and hours when throttling applies
 
+**Sync Throttle** is used to moderate network usage outside normal hours:
+
+* **Enable sync throttling** – Turns on throttled bandwidth for uploads and downloads.
+* **Upload/download throttled speed (KB/s)** – Limits speeds during throttle times to conserve bandwidth.
+* **Full‑speed start hour** – Time at which full‑speed sync begins.
+* **Full‑speed stop hour** – Time at which full‑speed sync ends and throttling resumes.
+
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Client Settings Manager`` > ``macOS Client Settings``
 
 .. image:: _static/cluster-policy-clicked-client-settings-mac-client-settings-detail-view.png
    :alt: macOS Client settings page with options to control behaviour specific to Mac clients
+
+**macOS Client Settings** allow you to tailor the user experience on Apple computers:
+
+* **Hide Mac sync status pop‑up** – Prevents pop‑up notifications about sync status on macOS.
+* **Auto start Mac client** – Launches the Mac client automatically when the user logs in so that files are kept in sync.
 
 **Retention Policy & Ransomware Protection** – define how long versioned files, deleted files and change logs are kept and enable ransomware detection.  You can specify retention periods for various log types, hide purge commands, suppress notifications and decide whether unpurged items count against storage quotas.
 
@@ -194,10 +278,29 @@ The **Common Settings** group contains policies that apply to everyone.  These 
 .. image:: _static/cluster-policy-clicked-client-settings-retention-policy-detail-view.png
    :alt: Retention Policy settings with fields to specify retention periods for versions, deleted items, file change logs, audit traces and Mac client logs, plus options to hide purge commands and suppress notifications
 
+The **Retention Policy** determines how long different types of data remain on the server before being purged:
+
+* **Version retention (days)** – Number of days to keep old versions of files.
+* **Deleted items retention (days)** – Days to keep deleted files before purging.
+* **File change log retention (days)** – Days to retain change logs for audit or recovery.
+* **Audit trace retention (days)** – Days to keep audit logs.
+* **Mac client log retention (days)** – Days to store log files from the Mac client.
+* **Hide purge commands** – Hides the purge option from users to prevent accidental deletion.
+* **Suppress notifications** – Stops sending admin emails when items are purged.
+* **Unpurged items count toward storage quotas** – Determines whether items in the retention period affect quota calculations.
+
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Anti Virus/Ransomware``
 
 .. image:: _static/cluster-policy-clicked-client-settings-anti-virus-detail-view.png
    :alt: Anti Virus/Ransomware settings listing allowed and disallowed processes, file patterns to block, thresholds for disabling a device after excessive file changes and options to disable uploading files with specified prefixes, suffixes or substrings
+
+**Anti‑Virus/Ransomware** controls protect your cluster from malicious software:
+
+* **Allowed processes** – Processes permitted to update files on the cloud drive.
+* **Blocked processes** – Programs that are denied from opening or modifying files in the cloud drive.
+* **Device disable threshold** – Number of file changes in a short time that triggers disabling of the client device (ransomware detection).
+* **Ignored processes** – Processes that the ransomware monitor will skip.
+* **Block uploads by file name patterns** – Blocks uploading files if the name contains, starts with or ends with specified substrings, typically used to prevent uploading suspicious file types.
 
 Accounts & Login
 ~~~~~~~~~~~~~~~~~
@@ -216,12 +319,30 @@ Policies under **Accounts & Login** focus on user identity and authentication,
 .. image:: _static/cluster-policy-clicked-user-account-detail-view-2.png
    :alt: User Account settings (part 2) covering additional lifecycle options and device limits
 
+**User Account** policies determine how users are created and managed:
+
+* **Allow user self‑registration** – Lets users create their own accounts without admin approval.
+* **Allow guest accounts** – Permits creation of guest accounts for external collaborators.
+* **Force password reset on first login** – Requires users to change their password the first time they log in.
+* **Prevent users from renaming themselves** – Stops users from changing their display name.
+* **Auto‑delete account when device removed** – Automatically deletes a user account when their device is deregistered.
+* **Device limit per user** – Sets the maximum number of devices a user can link to their account.
+
 **Password Policy** – define minimum password length and complexity, expiration intervals and account lockout rules.
 
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Password Policy``
 
 .. image:: _static/cluster-policy-clicked-password-policy-detail-view.png
    :alt: Password Policy settings with fields for minimum length, complexity requirements, expiration days, remembered password count and lockout thresholds
+
+**Password Policy** enforces strong credentials:
+
+* **Minimum password length** – Shorter passwords are easier to guess; setting a minimum length ensures stronger passwords.
+* **Password complexity** – Requires a mix of uppercase, lowercase, numbers and special characters to make passwords harder to crack.
+* **Password expiration (days)** – Forces users to change their password periodically to reduce the risk of long‑term compromise.
+* **Number of remembered passwords** – Prevents users from reusing a set number of previous passwords.
+* **Account lockout threshold** – Number of failed login attempts before the account is locked.
+* **Lockout duration** – How long an account remains locked after exceeding the threshold.
 
 **Single Sign‑On** – enable SAML or OpenID Connect integration.  Supply identity‑provider metadata, certificates and decide whether users can bypass SSO.
 
@@ -230,12 +351,26 @@ Policies under **Accounts & Login** focus on user identity and authentication,
 .. image:: _static/cluster-policy-clicked-single-sign-on-detail-view.png
    :alt: Single Sign‑On settings with fields for IdP metadata URLs or certificates, button label text and toggles to require SSO for all users
 
+**Single Sign‑On** simplifies authentication by delegating it to a corporate identity provider:
+
+* **Enable SSO** – Uses SAML or OpenID Connect to authenticate users through an external identity provider.
+* **Identity provider metadata** – Provides the URL or certificate information for the IdP.
+* **SSO button label** – Text displayed on the login page for the SSO button.
+* **Require SSO for all users** – Forces all users to use SSO; disables fallback to username/password.
+* **Disable username/password login** – Prohibits local logins when SSO is enabled.
+
 **Azure AD** – configure authentication via Azure Active Directory by entering your tenant ID and native application client ID.
 
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Azure AD``
 
 .. image:: _static/cluster-policy-clicked-azure-ad-detail-view.png
    :alt: Azure AD settings page with check box to enable Azure AD authentication and fields for tenant ID and client ID
+
+**Azure AD** integration allows users to log in with Microsoft 365 credentials:
+
+* **Enable Azure AD authentication** – Allows users to log in with their Azure AD credentials.
+* **Tenant ID** – The Azure AD tenant identifier used to locate the directory.
+* **Client ID** – The application ID registered in Azure AD for authentication.
 
 Folder & Storage
 ~~~~~~~~~~~~~~~~
@@ -249,12 +384,26 @@ Policies in **Folder & Storage** determine where user and team folders reside 
 .. image:: _static/cluster-policy-clicked-folder-and-storage-detail-view.png
    :alt: Folder & Storage settings page showing fields to define root paths for user home and team folders, set storage limits and enable or disable automatic folder creation
 
+**Folder & Storage** settings determine where user and team folders reside and how much space each tenant can consume:
+
+* **Home and team folder paths** – Sets root directories where user and team folders will be created.
+* **Storage quotas** – Limits the total storage that a tenant can consume.
+* **Auto‑create folders** – Automatically creates home or team folders upon user or tenant creation.
+* **Restrict tenant admin changes** – Prevents tenant admins from modifying these storage settings.
+
 **Home Directory** – set naming patterns for user home directories, choose whether to auto‑create them on first login and restrict users from changing their home location.
 
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Home Directory``
 
 .. image:: _static/cluster-policy-clicked-home-directory-detail-view.png
    :alt: Home Directory settings page with options to specify naming patterns, automatically create home directories and restrict changes by users
+
+**Home Directory** policies control how personal folders are provisioned:
+
+* **Naming pattern** – Template for generating home directory names (e.g. `{user}@{tenant}`).
+* **Auto‑create home directory** – Creates a user’s home directory the first time they log in.
+* **Restrict changes** – Prevents users from changing their home directory path.
+* **Auto‑add network shares** – Automatically connects network shares under the tenant root for convenience.
 
 **Attached Folder** – control how client devices attach local folders and specific file types.  Options span multiple screens and include disabling attachment of local folders, enabling snapshot backup for server agent, allowing sync of empty or hidden files and managing allowed file extensions.
 
@@ -268,12 +417,30 @@ Policies in **Folder & Storage** determine where user and team folders reside 
 .. image:: _static/cluster-policy-clicked-attached-folder-detail-view-2.png
    :alt: Attached Folder settings (part 2) continuing the configuration with scheduled sync frequency options and impersonation controls
 
+**Attached Folder** controls how client devices attach local folders and what file types are allowed:
+
+* **Disable local folder attachment** – Prevents users from backing up or syncing local folders through the client.
+* **Enable snapshot backup** – Allows server agent to create point‑in‑time backups of attached folders.
+* **Sync empty files** – Includes zero‑byte files in backups and syncs.
+* **Sync hidden files** – Includes hidden files (e.g. system files) in backups and syncs.
+* **Allowed file extensions** – Specifies file types that can be attached or synced (e.g. `.exe`, `.iso`).
+* **Scheduled sync frequency** – Sets how often attached folders are synced (e.g. daily, weekly).
+* **Proxy mode** – Allows attachments to be synced through a proxy instead of a direct connection.
+* **Impersonation** – Uses the logged‑in user's credentials to access attached folders.
+
 **Filters** – define file types that are allowed or blocked when uploading or syncing data.
 
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Filters``
 
 .. image:: _static/cluster-policy-clicked-filters-detail-view.png
    :alt: Filters settings page with lists of excluded and included file extensions and import/export buttons for filter lists
+
+**Filters** let you explicitly allow or block certain file types:
+
+* **Excluded file extensions** – List of extensions to block from being uploaded or synced.
+* **Included file extensions** – List of extensions allowed, overriding the blocked list.
+* **Import filter list** – Allows uploading a preconfigured list of file filters.
+* **Export filter list** – Downloads the current list of file filters for backup or reuse.
 
 **Web Portal** – configure portal‑specific policies such as UI behaviour and default landing pages.
 
@@ -286,6 +453,8 @@ Policies in **Folder & Storage** determine where user and team folders reside 
 
 .. image:: _static/cluster-policy-clicked-web-portal-detail-view-2.png
    :alt: Web Portal settings (part 2) with additional configuration options (example image placeholder)
+
+The **Web Portal** page contains miscellaneous policies for the browser interface.  Use it to configure portal UI options such as default landing pages, navigation elements and branding fields.  Specific fields vary by release.
 
 Client Control
 ~~~~~~~~~~~~~~
@@ -304,12 +473,23 @@ The **Client Control** category fine‑tunes how the CentreStack clients operat
 .. image:: _static/cluster-policy-clicked-native-client-detail-view-2.png
    :alt: Native Client settings (part 2) continuing the client‑side configuration options (example image placeholder)
 
+**Native Client** settings fine‑tune how the Windows desktop client behaves:
+
+* **Auto start** – Launches the CentreStack client when the user logs in to ensure files stay synced.
+* **Hide system tray icon** – Runs the client silently without showing a tray icon.
+* **Disable offline caching** – Prevents local copies from being stored, improving security in high‑risk environments.
+* **Encrypt local cache** – Encrypts cached files so that even if the device is compromised, the cached data remains protected.
+* **Log level** – Sets the verbosity of client logs to aid in troubleshooting.
+* **Restrict user settings** – Prevents end users from changing key client settings such as auto‑start or caching.
+
 **Client Shutdown Script** – set commands to run when the client shuts down.
 
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Client Shutdown Script``
 
 .. image:: _static/cluster-policy-clicked-client-settings-client-shutdown-script-detail-view.png
    :alt: Client Shutdown Script settings showing a field where administrators can specify a script that runs when the client closes
+
+The **Client Shutdown Script** option lets administrators run a custom command when the Windows client closes.  For example, you might use this to run cleanup tasks, upload final logs or trigger a backup.
 
 While this list summarises the major policy areas, each screen contains additional toggles and fields.  Explore the Default Group Policy pages to fine‑tune how your cluster operates.
 
