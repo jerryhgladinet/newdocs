@@ -143,15 +143,35 @@ The **Security** page contains a handful of toggles that govern how users authen
 .. image:: _static/cluster-policy-clicked-sharing-detailed-view-part1.png
    :alt: Sharing settings page with options to require login for shared files, disable external sharing of home directories, enable internal share URLs, disable public links and manage guest user options
 
-The **Sharing** settings govern how users share files and folders with others.  They help administrators balance collaboration with security.  Key options include:
+.. image:: _static/cluster-policy-clicked-sharing-detailed-view-part2.png
+   :alt: continuation of the Sharing settings page showing expiration time options, domain restrictions, default Outlook folder, link button behaviour and video preview settings
 
-* **Require login for shared files** – Recipients must sign in to view shared items, ensuring that access is tracked and controlled.
-* **Disable external sharing of home directories** – Prevents users from sharing their personal home folders externally to avoid inadvertent data exposure.
-* **Enable internal share URLs** – Allows the system to generate share links using the worker node’s internal URL representation.  Many companies have separate internal and external DNS names for the same server, so an internal link avoids exposing external DNS names.
-* **Disable public links** – Blocks creation of anonymous public links to ensure that all shares are authenticated.
-* **Show or hide guest user options** – Determines whether share dialogs include options to invite guests, letting administrators restrict guest account creation.
-* **Hide user and guest lists in sharing dialogs** – Conceals the lists of internal users and guests when creating shares, protecting privacy in organisations with large directories.
-    * **Require approval for external guest accounts** – Enforces an administrator review process for guest invitations; external guests cannot access shared content until an admin approves the invitation.
+The **Sharing** settings govern how users share files and folders with others.  They help administrators balance collaboration with security.  Below is a complete list of the sharing policies and what they’re used for:
+
+* **Require login for shared files** – Users must log in to access items in the *Files shared with me* folder; this ensures that viewing is audited and only authenticated users can see shared content.
+* **Disable external sharing of home directories** – Prevents users from sharing their personal home folder externally.  When disabled, administrators can allow or disallow external sharing on a per‑user basis.
+* **Enable internal public share URL** – Generates share links using the worker node’s internal URL so that an organisation’s external DNS name isn’t exposed.
+* **Disable public links** – Completely blocks the creation of anonymous public links; all shares require authentication.
+* **Show guest user creation option** – Displays an option in the share dialog to invite a new guest account; turning it off removes the invitation field and reduces accidental external sharing.
+* **Show user list in sharing dialog** – Shows the internal user directory in the recipient dropdown, making it easy to pick colleagues; turning it off hides the list so the sharer must type addresses manually.
+* **Show guest user list in sharing dialog** – Shows a list of previously created guest accounts; useful when regularly sharing with the same outside contacts.
+* **Show group list in sharing dialog** – Provides a list of groups so the sharer can grant access to an entire group rather than individual users.
+* **Allow user to enter share name** – Lets the person sharing give the share a custom name, which appears in the recipient’s *Files Shared With Me* area.
+* **Send a copy of the invitation to the share owner** – Sends the sharing invitation email to the owner as well, so they have a record of when and to whom content was shared.
+* **Don’t append email to shared object names** – By default, the recipient’s email address is added to file/folder names in *Files Shared With Me* to differentiate duplicate names.  Enabling this setting keeps names clean without email suffixes.
+* **Disable folder sharing** – Disallows sharing of entire folders; users can still share individual files.  This provides finer control and prevents unintentionally exposing a whole directory.
+* **Enforce password protection** – Requires that every share link be protected by a password, adding an extra layer of security for all external shares.
+* **Expiration time for shared folder/file (days)** – Sets a default number of days after which new shares expire automatically.  A value of 0 lets users choose their own expiration time when creating a share.
+* **Maximum share expiration time (days)** – Caps the expiration period a user can set on a share; for example, if set to 30 days, no share can last longer than 30 days.
+* **Notify share owner n days before share expires** – Sends a reminder email to the owner a specified number of days before the share expires so they can extend or remove it.
+* **Expiration time for public links (days)** – Automatically expires public links after the configured number of days.  A value of 0 means public links never expire.
+* **Do not create guest account for recipients from these domains** – Lists domains (e.g. `company.com;company1.com`) whose recipients should *not* have guest accounts created automatically.  This prevents cluttering the system with guest accounts for internal or partner domains.
+* **Only allow sending shares to these domains** – Restricts sharing to recipients whose email addresses match the listed domains.  This is useful when an organisation only permits external collaboration with certain partners.
+* **Default folder to store attachments from Outlook plugin** – Sets the path in your CentreStack storage where attachments uploaded via the Outlook plugin will be saved (e.g. `/folder/subfolder`).
+* **Show “Get Link” button only for unprotected shares** – When enabled, the *Get Link* button appears only if the share doesn’t require a password.  Otherwise, the link can only be sent via email through the sharing dialog.
+* **Disable video preview without download permission** – Removes video previews from the share page if the recipient doesn’t have permission to download the file, preventing unintended streaming.
+* **Hide user and guest lists in sharing dialogs** – Conceals the internal user, guest and group lists entirely.  When enabled, the sharer must type in email addresses manually rather than selecting from lists.
+* **Require approval for external guest accounts** – When this policy is turned on, any invitation sent to an external guest must be approved by an administrator before the guest can access the content.
 
 **File Locking** – configure distributed locking rules.  Enable check‑in/check‑out, define automatic unlock time‑outs and allow forced unlocks.  The detailed view may span multiple screens.
 
