@@ -129,10 +129,12 @@ The **Common Settings** group contains policies that apply to everyone.  These 
 The **Security** page contains a handful of toggles that govern how users authenticate and how their sessions are protected.  Each option corresponds to a specific need an administrator might have.  For example:
 
 * **Notify user when email is changed** – Notifies the original email address whenever the account email is changed, so that the user can detect unauthorised modifications and respond quickly.
-* **Force client re‑authenticate when network changes** – Requires users to re‑login when their IP/network changes to reduce the risk of session hijacking when someone steals a session cookie and moves to a different network.
+* **Force client re‑authenticate when network changes** – Requires users to re‑login when their IP or network changes to reduce the risk of someone stealing a long‑lived session token for the client application.
 * **Enable authenticating user with Google Apps credentials** – Allows users to sign in using their Google credentials for convenience and centralised identity management without requiring a separate password.
-* **Delegate admin impersonates tenant admin via server agent** – When a delegated admin logs in via the Server Agent, automatically impersonates the tenant admin so they have the correct permissions to manage tenant resources.
-* **File upload and download go through worker node** – Forces all transfers to pass through the worker node for scanning, auditing and bandwidth control rather than direct peer‑to‑peer transfers.
+* **Delegate admin impersonates tenant admin via server agent** – When a delegated admin logs in via the Server Agent, automatically impersonates the tenant admin so the server agent synchronises with the main tenant’s default storage space instead of the delegate admin’s personal storage.
+* **File upload and download go through worker node** – Forces all data transfers to pass through the worker node.  This is useful when object‑storage endpoints (such as Amazon S3) are blocked by company or country policy but the worker node’s IP (and the server farm) is permitted.
+    * **Require multi‑factor authentication** – Mandates a second factor (such as a one‑time code or authenticator app) when users log in, dramatically increasing security by making stolen passwords insufficient on their own.
+    * **Restrict external network access for native clients** – Prevents native clients from connecting over public or external networks; only devices on approved internal networks can access data, helping enforce perimeter security.
 
 **Sharing** – govern public links and guest users.  Require recipients to log in, disable external sharing of home directories, enable internal share URLs, disable public links and show or hide guest creation options.
 
@@ -145,9 +147,11 @@ The **Sharing** settings govern how users share files and folders with others.  
 
 * **Require login for shared files** – Recipients must sign in to view shared items, ensuring that access is tracked and controlled.
 * **Disable external sharing of home directories** – Prevents users from sharing their personal home folders externally to avoid inadvertent data exposure.
-* **Enable internal share URLs** – Allows the system to create share links that only work for authenticated internal users, facilitating collaboration within the organisation.
+* **Enable internal share URLs** – Allows the system to generate share links using the worker node’s internal URL representation.  Many companies have separate internal and external DNS names for the same server, so an internal link avoids exposing external DNS names.
 * **Disable public links** – Blocks creation of anonymous public links to ensure that all shares are authenticated.
 * **Show or hide guest user options** – Determines whether share dialogs include options to invite guests, letting administrators restrict guest account creation.
+* **Hide user and guest lists in sharing dialogs** – Conceals the lists of internal users and guests when creating shares, protecting privacy in organisations with large directories.
+    * **Require approval for external guest accounts** – Enforces an administrator review process for guest invitations; external guests cannot access shared content until an admin approves the invitation.
 
 **File Locking** – configure distributed locking rules.  Enable check‑in/check‑out, define automatic unlock time‑outs and allow forced unlocks.  The detailed view may span multiple screens.
 
@@ -180,6 +184,7 @@ Use the **File Locking** pages to prevent conflicts when multiple users access 
 
 * **Download/upload limit (KB/s)** – Caps the bandwidth used by the client for downloads and uploads, preventing it from saturating the user's internet connection.
 * **Number of threads** – Sets how many parallel transfers the client can perform, balancing speed with resource usage.
+    * **Use Volume Shadow Copy to upload files being opened** – Utilises the Windows Volume Shadow Copy service to upload files that are currently open or locked by other applications, ensuring in‑use documents are backed up.
 
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Client Settings Manager`` > ``Large File Upload``
 
@@ -191,6 +196,7 @@ Use the **File Locking** pages to prevent conflicts when multiple users access 
 * **Enable chunked uploads** – Breaks large files into smaller chunks for reliable transfers and resumable uploads.
 * **Chunk size** – Defines the size of each upload chunk.
 * **Use Volume Shadow Copy** – Allows uploading files that are in use by temporarily copying them.
+    * **Threshold file size (MB)** – Chunked uploading only applies to files larger than this size; a value of 0 means all files will be split into chunks.
 
 ``Cluster Dashboard`` > ``Default Group Policy`` > ``Client Settings Manager`` > ``Mapped Drive Control (Part 1)``
 
